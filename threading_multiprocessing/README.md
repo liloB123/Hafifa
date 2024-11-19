@@ -22,4 +22,4 @@ In the first part, we focused only on Bitcoin. Now, adapt your existing code to 
 - **Google**: `GOOGLE_DATES` (file: `google_dates.txt`)
 - **Bitcoin**: `BITCOIN_DATES` (file: `bitcoin_dates.txt`)
 
-## Good Luck, Champions! (:
+## Good Luck! (:
