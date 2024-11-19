@@ -22,16 +22,4 @@ In the first part, we focused only on Bitcoin. Now, adapt your existing code to 
 - **Google**: `GOOGLE_DATES` (file: `google_dates.txt`)
 - **Bitcoin**: `BITCOIN_DATES` (file: `bitcoin_dates.txt`)
 
-### Additional Requirements:
-- Modify the code so it can process multiple stock types concurrently using the multithreaded approach.
-- Ensure the final CSV file contains records for all three stocks, with the following columns:
-   - **Hour**
-   - **Stock Type**
-   - **Percentage Change**
-
-### Recommendations:
-- Use `ThreadPoolExecutor` for handling threading efficiently.
-- Use `pandas` to append data from each stock type into the same CSV file.
-- Ensure proper error handling for data retrieval and CSV writing.
-
 ## Good Luck, Champions! (:
