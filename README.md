@@ -9,6 +9,11 @@ Welcome to Optimus! This repository is designed to guide you through a set of to
 2. [Clean Code](#clean-code)
 3. [Web Scraping](#web-scraping)
 4. [Threading and MultiProcessing](#threading-and-multiprocessing)
+5. [Databases](#databases)
+   5.1 [PostgreSQL](#postgres)
+   5.2 [MongoDB](#mongo)
+   5.3 [S3](#s3)
+   5.4 [Redis](#redis)
 
 ---
 
@@ -61,6 +66,26 @@ There is an exercise in the `threading_multiprocessing/` folder where you'll nee
 
 ---
 
+## 5. Databases
+
+### Duration: 1 Day
+
+**Learning Material**
+
+#### 5.1 PostreSQL
+  - [Postgresql tutorial](https://www.w3schools.com/postgresql/postgresql_exercises.php)
+
+#### 5.2 MongoDB
+  - [Mongo interactive toturial](https://www.mongodb.com/docs/manual/tutorial/getting-started/)
+
+#### 5.3 S3
+- [S3 Guide](https://youtu.be/tfU0JEZjcsg?si=ch-W6mPULHn79Ars)
+
+#### 5.4 Redis
+  - [Redis introduction](https://youtu.be/G1rOthIU-uo?si=jhEWzfj59GZrHBg7)
+  - [Redis begginers' guide](https://daily.dev/blog/redis-basics-for-new-developers)
+
+---
 ## Submitting Your Exercises
 
 1. Fork this repository to your own GitHub account.
