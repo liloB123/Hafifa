@@ -1,8 +1,9 @@
-# תרגיל Clean Code בפייתון
+# Python Clean Code Exercise
+Now when you know how to write a basic code in python and know the syntax, we'll see how to write a good code:)
 
-עכשיו כשאתם יודעים לכתוב קוד פייתון בסיסי ומכירים את הסינטקס, עכשיו נראה איך כותבים גם קוד טוב :)
+You have a file of a mp3 player that works, but is badly written.
 
-נתון לכם קובץ של נגן mp3 שעובד אבל הוא כתוב בצורה (בלשון המעטה) לא טובה.
+Your mission is to take the code and organize it as much as you can.
+To help you, you have a git repo that sums up the principles of python clean code.
 
-המשימה שלכם אם תבחרו לקחת אותה היא לקחת את הקוד ולסדר אותו כמה שיותר.
-לסיוע נתון לכם repo בגיט שמסכם פחות או יותר את העקרונות של clean code בפייתון.
+Good Luck!
