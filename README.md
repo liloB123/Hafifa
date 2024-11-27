@@ -72,19 +72,32 @@ There is an exercise in the `threading_multiprocessing/` folder where you'll nee
 
 **Learning Material**
 
-#### 5.1. PostreSQL
-  - [Postgresql tutorial](https://www.w3schools.com/postgresql/postgresql_exercises.php)
+#### 5.1. PostgreSQL
+A tutorial on postgreSQL (We know you've learnt it already, but go over it quickly)
+- [Postgresql tutorial](https://www.w3schools.com/postgresql/postgresql_exercises.php)
 
 #### 5.2. MongoDB
-  - [Mongo interactive toturial](https://www.mongodb.com/docs/manual/tutorial/getting-started/)
+- [Mongo interactive toturial](https://www.mongodb.com/docs/manual/tutorial/getting-started/)
 
 #### 5.3. S3
+Quick overview about s3
 - [S3 Guide](https://youtu.be/tfU0JEZjcsg?si=ch-W6mPULHn79Ars)
 
 #### 5.4. Redis
-  - [Redis introduction](https://youtu.be/G1rOthIU-uo?si=jhEWzfj59GZrHBg7)
-  - [Redis begginers' guide](https://daily.dev/blog/redis-basics-for-new-developers)
+Inroduction to Redis and learning the syntax
+- [Redis introduction](https://youtu.be/G1rOthIU-uo?si=jhEWzfj59GZrHBg7)
+- [Redis begginers' guide](https://daily.dev/blog/redis-basics-for-new-developers)
 
+---
+## 6. Building API
+
+### Duration: 0.5 Days
+
+**Fast API**
+- [FastAPI explanation](https://youtu.be/iWS9ogMPOI0?si=HPv_xetY7HGfOxPK)
+
+**SQLAlchemy**
+- [SQLAlchemy](https://www.tutorialspoint.com/sqlalchemy/sqlalchemy_introduction.htm)
 ---
 ## Submitting Your Exercises
 
