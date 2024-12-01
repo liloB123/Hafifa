@@ -134,6 +134,14 @@ Inroduction to Redis and learning the syntax
 There is an exercise in the `rooling_exercise/` folder where you'll need to build an API. Follow the instructions provided in the folder.
 
 ---
+
+## 9. Data Engineering
+
+### Duration: 0.5 Days
+
+- [DE Introduction](#https://docs.google.com/document/d/1ZOsylqaWftkHFjnqHi_d3As8c_ifI8EOHQZhfscUdGo/edit?tab=t.0#heading=h.udg0q6xlt4mv)
+- [DE Introduction Video](#https://www.youtube.com/watch?v=qWru-b6m030)
+---
 ## Submitting Your Exercises
 
 1. Fork this repository to your own GitHub account.
