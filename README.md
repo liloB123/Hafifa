@@ -101,7 +101,12 @@ Inroduction to Redis and learning the syntax
 #### 6.1. FastAPI
 - [FastAPI Explanation](https://youtu.be/iWS9ogMPOI0?si=HPv_xetY7HGfOxPK)
 - [FastAPI Syntax Guide](https://fastapi.tiangolo.com/tutorial/first-steps/)
-Read from "First Steps" to "Request Body". Also read "Handling Errors" and "Debugging".
+
+**Notes**:  
+- **Only** cover the following topics:
+  - From "First Steps" to "Request Body"
+  - "Handling Errors"
+  - "Debugging"
 
 #### 6.2. SQLAlchemy
 - [SQLAlchemy](https://www.tutorialspoint.com/sqlalchemy/sqlalchemy_introduction.htm)
