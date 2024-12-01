@@ -6,7 +6,7 @@ They decided that this is really dangerous and should be monitored. They thought
 ## Your Mission
 
 This exercise is a rolling exercise that will include creating a DB and building an API with error handling, tests and loggers.
-Examples for csv files are under the folder `/air_quality_files`
+Examples for csv files are under the folder `air_quality_files/`
 
 **The API will:**
 - Process air quality data from various cities around the country.
@@ -26,7 +26,7 @@ You will need to implement the following:
   For example, Rows with missing or corrupted values should be logged and ignored.
 
 - **Calculate the AQI:**
-  You will use a function given to you in the file `/calculate_aqi.py` to calculate the AQI based on
+  You will use a function given to you in the file `calculate_aqi.py` to calculate the AQI based on
   the pollution levels.
   This AQI will be stored along with the pollutants.
 
