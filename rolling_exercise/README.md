@@ -22,9 +22,7 @@ You will need to implement the following:
 
 - **Validate the Data**
   Implement functionality to validate and clean uploaded data before saving it to the database.
-  For example:
-  - Rows with missing or corrupted values should be logged and ignored.
-  - Add endpoints to fetch and display errors in the uploaded data.
+  For example, Rows with missing or corrupted values should be logged and ignored.
 
 - **Calculate the AQI:**
   You will use a function given to you in the file `/calculate_aqi.py` to calculate the AQI based on
