@@ -14,7 +14,10 @@ Welcome to Optimus! This repository is designed to guide you through a set of to
   5.2. [MongoDB](#mongo)
   5.3. [S3](#s3)
   5.4. [Redis](#redis)
-
+6. [Building API](#api)
+  6.1 [FastAPI](#fastapi)
+  6.2 [SQLAlchemy](#sqlalchemy)
+   
 ---
 
 ## 1. Git
@@ -70,14 +73,14 @@ There is an exercise in the `threading_multiprocessing/` folder where you'll nee
 
 ### Duration: 1 Day
 
-**Learning Material**
+**Learning Material**:
 
 #### 5.1. PostgreSQL
 A tutorial on postgreSQL (We know you've learnt it already, but go over it quickly)
-- [Postgresql tutorial](https://www.w3schools.com/postgresql/postgresql_exercises.php)
+- [Postgresql Tutorial](https://www.w3schools.com/postgresql/postgresql_exercises.php)
 
 #### 5.2. MongoDB
-- [Mongo interactive toturial](https://www.mongodb.com/docs/manual/tutorial/getting-started/)
+- [Mongo Interactive Tutorial](https://www.mongodb.com/docs/manual/tutorial/getting-started/)
 
 #### 5.3. S3
 Quick overview about s3
@@ -85,19 +88,27 @@ Quick overview about s3
 
 #### 5.4. Redis
 Inroduction to Redis and learning the syntax
-- [Redis introduction](https://youtu.be/G1rOthIU-uo?si=jhEWzfj59GZrHBg7)
-- [Redis begginers' guide](https://daily.dev/blog/redis-basics-for-new-developers)
+- [Redis Introduction](https://youtu.be/G1rOthIU-uo?si=jhEWzfj59GZrHBg7)
+- [Redis Begginers' Guide](https://daily.dev/blog/redis-basics-for-new-developers)
 
 ---
 ## 6. Building API
 
-### Duration: 0.5 Days
+### Duration: 1 Day
 
-**Fast API**
-- [FastAPI explanation](https://youtu.be/iWS9ogMPOI0?si=HPv_xetY7HGfOxPK)
+**Learning Material**:
 
-**SQLAlchemy**
+#### 6.1. FastAPI
+- [FastAPI Explanation](https://youtu.be/iWS9ogMPOI0?si=HPv_xetY7HGfOxPK)
+- [FastAPI Syntax Guide](https://fastapi.tiangolo.com/tutorial/first-steps/)
+Read from "First Steps" to "Request Body". Also read "Handling Errors" and "Debugging".
+
+#### 6.2. SQLAlchemy
 - [SQLAlchemy](https://www.tutorialspoint.com/sqlalchemy/sqlalchemy_introduction.htm)
+
+**Exercise**:  
+
+
 ---
 ## Submitting Your Exercises
 
