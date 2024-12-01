@@ -1,0 +1,8 @@
+date,city,PM2.5,NO2,CO2
+2024-11-21,Tal Mond,62,90,430
+2024-11-21,Tzur Moshe,75,110,460
+2024-11-21,Netanya,60,85,430
+2024-11-21,Hod Hasharon,65,100,NaN
+2024-11-21,Ganei Tikva,65,95,440
+2024-11-21,Kefar Sava,74,,455
+2024-11-21,Rishon LeTsiyon,70,105,440
