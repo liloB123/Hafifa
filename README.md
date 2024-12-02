@@ -17,6 +17,8 @@ Welcome to Optimus! This repository is designed to guide you through a set of to
 6. [Building API](#api)
   6.1 [FastAPI](#fastapi)
   6.2 [SQLAlchemy](#sqlalchemy)
+7. [Testing](#testing)
+8. [Rolling Exercise](#rolling-exercise)
    
 ---
 
@@ -92,6 +94,7 @@ Inroduction to Redis and learning the syntax
 - [Redis Begginers' Guide](https://daily.dev/blog/redis-basics-for-new-developers)
 
 ---
+
 ## 6. Building API
 
 ### Duration: 1 Day
@@ -109,11 +112,36 @@ Inroduction to Redis and learning the syntax
   - "Debugging"
 
 #### 6.2. SQLAlchemy
-- [SQLAlchemy](https://www.tutorialspoint.com/sqlalchemy/sqlalchemy_introduction.htm)
+- [SQLAlchemy Documentation](https://www.tutorialspoint.com/sqlalchemy/sqlalchemy_introduction.htm)
 
-**Exercise**:  
+---
 
+## 7. Testing
 
+### Duration: 0.5 Days
+
+**Learning Material**:
+- [Begginers' Guide to Python Testing](https://medium.com/@sachinsoni600517/unit-testing-in-python-a-comprehensive-guide-for-beginners-985eec71bb4d)
+- [Pytest Documentation](https://docs.pytest.org/en/stable/)
+- [Mocking in Python](https://medium.com/@moraneus/the-art-of-mocking-in-python-a-comprehensive-guide-8b619529458f)
+
+---
+
+## 8. Rolling Exercise
+
+### Duration: 5 Days
+
+There is an exercise in the `rooling_exercise/` folder where you'll need to build an API. Follow the instructions provided in the folder.
+
+---
+
+## 9. Data Engineering
+
+### Duration: 0.5 Days
+
+- [DE Introduction](https://docs.google.com/document/d/1ZOsylqaWftkHFjnqHi_d3As8c_ifI8EOHQZhfscUdGo/edit?tab=t.0#heading=h.udg0q6xlt4mv)
+- [DE Introduction Video](https://www.youtube.com/watch?v=qWru-b6m030)
+  
 ---
 ## Submitting Your Exercises
 
