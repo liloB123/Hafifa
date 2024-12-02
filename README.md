@@ -121,9 +121,9 @@ Inroduction to Redis and learning the syntax
 ### Duration: 0.5 Days
 
 **Learning Material**:
-- [Begginers' Guide to Python Testing](#https://medium.com/@sachinsoni600517/unit-testing-in-python-a-comprehensive-guide-for-beginners-985eec71bb4d)
-- [Pytest Documentation](#https://docs.pytest.org/en/stable/)
-- [Mocking in Python](#https://medium.com/@moraneus/the-art-of-mocking-in-python-a-comprehensive-guide-8b619529458f)
+- [Begginers' Guide to Python Testing](https://medium.com/@sachinsoni600517/unit-testing-in-python-a-comprehensive-guide-for-beginners-985eec71bb4d)
+- [Pytest Documentation](https://docs.pytest.org/en/stable/)
+- [Mocking in Python](https://medium.com/@moraneus/the-art-of-mocking-in-python-a-comprehensive-guide-8b619529458f)
 
 ---
 
@@ -139,8 +139,9 @@ There is an exercise in the `rooling_exercise/` folder where you'll need to buil
 
 ### Duration: 0.5 Days
 
-- [DE Introduction](#https://docs.google.com/document/d/1ZOsylqaWftkHFjnqHi_d3As8c_ifI8EOHQZhfscUdGo/edit?tab=t.0#heading=h.udg0q6xlt4mv)
-- [DE Introduction Video](#https://www.youtube.com/watch?v=qWru-b6m030)
+- [DE Introduction](https://docs.google.com/document/d/1ZOsylqaWftkHFjnqHi_d3As8c_ifI8EOHQZhfscUdGo/edit?tab=t.0#heading=h.udg0q6xlt4mv)
+- [DE Introduction Video](https://www.youtube.com/watch?v=qWru-b6m030)
+  
 ---
 ## Submitting Your Exercises
 
