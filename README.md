@@ -18,7 +18,9 @@ Welcome to Optimus! This repository is designed to guide you through a set of to
   6.1 [FastAPI](#fastapi)
   6.2 [SQLAlchemy](#sqlalchemy)
 7. [Testing](#testing)
-8. [Rolling Exercise](#rolling-exercise)
+8. [Useful Python Libraries](#python-libraries)
+9. [Rolling Exercise](#rolling-exercise)
+10. [Data Engineering](#data-engineering)
    
 ---
 
@@ -97,7 +99,7 @@ Inroduction to Redis and learning the syntax
 
 ## 6. Building API
 
-### Duration: 1 Day
+### Duration: 0.5 Day
 
 **Learning Material**:
 
@@ -127,7 +129,17 @@ Inroduction to Redis and learning the syntax
 
 ---
 
-## 8. Rolling Exercise
+## 8. Useful Python Libraries
+
+### Duration: 1 Day
+
+- [NumPy Cheat Sheet](https://www.dataquest.io/cheat-sheet/numpy-cheat-sheet/)
+- [NumPy Exercises](https://www.w3schools.com/python/numpy/default.asp)
+- [Python Tutorial](https://www.w3schools.com/python/pandas/default.asp)
+
+---
+
+## 9. Rolling Exercise
 
 ### Duration: 5 Days
 
@@ -135,12 +147,34 @@ There is an exercise in the `rooling_exercise/` folder where you'll need to buil
 
 ---
 
-## 9. Data Engineering
+## 10. Data Engineering
 
-### Duration: 0.5 Days
+### Duration: 1 Hour
+
+**DE Explanation**
 
 - [DE Introduction](https://docs.google.com/document/d/1ZOsylqaWftkHFjnqHi_d3As8c_ifI8EOHQZhfscUdGo/edit?tab=t.0#heading=h.udg0q6xlt4mv)
 - [DE Introduction Video](https://www.youtube.com/watch?v=qWru-b6m030)
+If you feel that you don't understand it enough, you are more than welcome to read more about it.
+
+---
+
+## 11. Kafka🩷
+
+### Duration: 1 Hour
+
+- [Kafka Introduction](https://www.youtube.com/watch?v=Ch5VhJzaoaI&t=284s)
+- [Get To Know the Terms](https://kafka.apache.org/intro#)
+
+---
+
+## 12. Splunk
+
+### Duration: 1 Hour
+
+- [Splunk Introduction and Cheat Sheet](https://www.stationx.net/splunk-cheat-sheet/)
+- [Basic Splunk Searching](https://www.youtube.com/watch?v=GWl-TuAAF-k&t=102s)
+- [Creating a Splunk Dashboard](https://www.youtube.com/watch?v=uQUAvY5M3RU)
   
 ---
 ## Submitting Your Exercises
@@ -159,4 +193,4 @@ There is an exercise in the `rooling_exercise/` folder where you'll need to buil
 
 If you have any questions or need support, feel free to reach out to the team.
 
-Happy learning!
+Happy learning!🤍
