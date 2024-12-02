@@ -21,6 +21,8 @@ Welcome to Optimus! This repository is designed to guide you through a set of to
 8. [Useful Python Libraries](#python-libraries)
 9. [Rolling Exercise](#rolling-exercise)
 10. [Data Engineering](#data-engineering)
+11. [Kafka](#kafka)
+12. [Splunk](#splunk)
    
 ---
 
