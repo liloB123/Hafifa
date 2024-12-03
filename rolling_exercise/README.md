@@ -34,6 +34,7 @@ You will need to implement the following functionalities:
   The database will store the date, city name, PM2.5, NO2, CO2, and the calculated AQI.
   The data will be used for future analysis to track air quality trends across cities.
   If the AQI value is over 300, it will be saved in "alerts" table that will have the fields: date, city and AQI.
+  Think about what database is the most compatible
 
 - **Query for Insights:**
   You’ll create endpoints that allow residents to check the air quality in real-time.
