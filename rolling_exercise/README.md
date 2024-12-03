@@ -21,7 +21,7 @@ You will need to implement the following functionalities:
   residents at various cities will upload CSV files containing PM2.5, NO2, CO2 levels.
   Each file will also include a date and the city name.
 
-- **Validate the Data**
+- **Validate the Data:**
   Implement functionality to validate and clean uploaded data before saving it to the database.
   For example, Rows with missing or corrupted values should be logged and ignored.
 
