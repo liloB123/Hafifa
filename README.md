@@ -23,6 +23,7 @@ Welcome to Optimus! This repository is designed to guide you through a set of to
 10. [Data Engineering](#data-engineering)
 11. [Kafka](#kafka)
 12. [Splunk](#splunk)
+13. [Trino](#trino)
    
 ---
 
@@ -145,7 +146,7 @@ Inroduction to Redis and learning the syntax
 
 ### Duration: 5 Days
 
-There is an exercise in the `rooling_exercise/` folder where you'll need to build an API. Follow the instructions provided in the folder.
+There is an exercise in the `rolling_exercise/` folder where you'll need to build an API. Follow the instructions provided in the folder.
 
 ---
 
@@ -177,6 +178,15 @@ If you feel that you don't understand it enough, you are more than welcome to re
 - [Splunk Introduction and Cheat Sheet](https://www.stationx.net/splunk-cheat-sheet/)
 - [Basic Splunk Searching](https://www.youtube.com/watch?v=GWl-TuAAF-k&t=102s)
 - [Creating a Splunk Dashboard](https://www.youtube.com/watch?v=uQUAvY5M3RU)
+
+---
+
+## 13. Trino
+
+## Duration: 0.5 Hour
+
+- [Trino Introduction](https://www.youtube.com/watch?v=SKNJObdGCsY)
+- [Trino Concepts](https://trino.io/docs/current/overview/concepts.html)
   
 ---
 ## Submitting Your Exercises
