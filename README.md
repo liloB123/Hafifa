@@ -183,7 +183,7 @@ If you feel that you don't understand it enough, you are more than welcome to re
 
 ## 13. Trino
 
-## Duration: 0.5 Hour
+### Duration: 0.5 Hour
 
 - [Trino Introduction](https://www.youtube.com/watch?v=SKNJObdGCsY)
 - [Trino Concepts](https://trino.io/docs/current/overview/concepts.html)
