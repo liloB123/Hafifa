@@ -4,6 +4,26 @@ Welcome to Optimus! This repository is designed to guide you through a set of to
 
 ---
 
+## Submitting Your Exercises
+
+1. Fork this repository to your own GitHub account.
+2. Clone your fork locally:  
+   `git clone <your-fork-url>`
+3. Work on the exercises in their respective folders.
+4. Work on a seperate branch for each exercise.
+5. When you're ready, create a pull request for an exercise and inform your superior for a CR.
+6. The pull request should be to your forked repository.
+
+---
+
+## Questions and Support
+
+If you have any questions or need support, feel free to reach out to your supervisor.
+
+Happy learning!🤍
+
+---
+
 ## Table of Contents
 1. [Git](#1-git)
 2. [Clean Code](#2-clean-code)
@@ -188,21 +208,3 @@ If you feel that you don't understand it enough, you are more than welcome to re
 - [Trino Introduction](https://www.youtube.com/watch?v=SKNJObdGCsY)
 - [Trino Concepts](https://trino.io/docs/current/overview/concepts.html)
   
----
-## Submitting Your Exercises
-
-1. Fork this repository to your own GitHub account.
-2. Clone your fork locally:  
-   `git clone <your-fork-url>`
-3. Work on the exercises in their respective folders.
-4. Work on a seperate branch for each exercise.
-5. When you're ready, create a pull request for an exercise and inform your superior for a CR.
-6. The pull request should be to your forked repository.
-
----
-
-## Questions and Support
-
-If you have any questions or need support, feel free to reach out to the team.
-
-Happy learning!🤍
