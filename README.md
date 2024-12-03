@@ -50,7 +50,7 @@ Welcome to Optimus! This repository is designed to guide you through a set of to
 This github page includes Python best practices to write clean and maintainable code.
 
 **Exercise**:  
-- In the `clean_code/` folder, you will find a `main.py` file that requires refactoring. Apply the principles described in the reference material to improve the code quality.
+- In the `clean_code/` folder in this project, you will find a `main.py` file that requires refactoring. Apply the principles described in the reference material to improve the code quality.
 
 ---
 
