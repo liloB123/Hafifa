@@ -10,7 +10,7 @@ Welcome to Optimus! This repository is designed to guide you through a set of to
 3. [Web Scraping](#3-web-scraping)
 4. [Threading and MultiProcessing](#4-threading-and-multiprocessing)
 5. [Databases](#5-databases)  
-  5.1. [PostgreSQL](#51-postgres)  
+  5.1. [PostgreSQL](#51-postgressql)  
   5.2. [MongoDB](#52-mongodb)  
   5.3. [S3](#53-s3)  
   5.4. [Redis](#54-redis)  
