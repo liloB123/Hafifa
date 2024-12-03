@@ -15,7 +15,7 @@ Examples for csv files are under the folder `air_quality_files/`
 - Allow residents to check the air quality by querying the system, so they can decide if it’s safe to walk in the park or if they should keep their windows shut.
 
 ## The API’s Functionality
-You will need to implement the following:
+You will need to implement the following functionalities:
 
 - **Upload Air Quality Data:**
   residents at various cities will upload CSV files containing PM2.5, NO2, CO2 levels.
