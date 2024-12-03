@@ -158,7 +158,7 @@ Inroduction to Redis and learning the syntax
 
 - [NumPy Cheat Sheet](https://www.dataquest.io/cheat-sheet/numpy-cheat-sheet/)
 - [NumPy Exercises](https://www.w3schools.com/python/numpy/default.asp)
-- [Python Tutorial](https://www.w3schools.com/python/pandas/default.asp)
+- [Pandas Tutorial](https://www.w3schools.com/python/pandas/default.asp)
 
 ---
 
