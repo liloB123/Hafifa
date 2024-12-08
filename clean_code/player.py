@@ -80,8 +80,8 @@ class MP3App(Frame):
     def __init__(self,master):
         super(MP3App, self).__init__(master)
         self.grid()
-        self.bg = 'AntiqueWhite1'
-        self.width = 40
+        self.button_bg = 'AntiqueWhite1'
+        self.button_width = 40
         self.label = Label(self, fg='Black',font=('Helvetica 12 bold italic',10),bg='ivory2')
         self.label.grid(row=6,column=0)
         self.text = Text(self,wrap=WORD,width=60)
@@ -130,8 +130,8 @@ class MP3App(Frame):
             button = Button(self, 
                             text=action.value, 
                             command=functions_array[index],
-                            bg=self.bg, 
-                            width=self.width)
+                            bg=self.button_bg, 
+                            width=self.button_width)
             button.grid(row=index+1, column=0)
 
 window = Tk()
