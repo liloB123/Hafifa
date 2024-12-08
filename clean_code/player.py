@@ -22,6 +22,7 @@ class SongPlayer:
     def add(self):
         try:
             directory = askopenfilenames()
+            
             for song_dir in directory:
                 self.list.append(song_dir)
         except:
