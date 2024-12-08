@@ -5,7 +5,7 @@ from tkinter import *
 from enum import Enum
 pygame.init()
 
-class ButtonAction(Enum):
+class ButtonsActions(Enum):
         ADD_TO_LIST = "ADD TO LIST"
         PLAY_SONG = "PLAY SONG"
         PAUSE_UNPAUSE = "PAUSE/UNPAUSE"
@@ -23,21 +23,13 @@ class SongPlayer:
         try:
             directory = askopenfilenames()
             for song_dir in directory:
-                print(song_dir)
                 self.list.append(song_dir)
-            self.text.delete(0.0, END)
-
-            for key, item in enumerate(self.list):
-                song = EasyID3(item)
-                song_data = (str(key + 1) + ' : ' + song['title'][0] + ' - '
-                            + song['artist'][0])
-                self.text.insert(END, song_data + '\n')
         except:
             pass
     
-    def song_data(self):
+    def data(self, song):
         try:
-            song = EasyID3(self.list[self.list_index])
+            song = EasyID3(song)
             song_data = "Now playing: Nr:" + str(self.list_index + 1) + " " + \
                         str(song['title']) + " - " + str(song['artist'])
             return song_data
@@ -46,12 +38,11 @@ class SongPlayer:
 
     def play(self):
         try:
-            directory = self.list[self.list_index]
-            pygame.mixer.music.load(directory)
+            song = self.list[self.list_index]
+            pygame.mixer.music.load(song)
             pygame.mixer.music.play(1, 0.0)
             pygame.mixer.music.set_endevent(self.SONG_END)
             self.pausing = False
-            self.label['text'] = self.song_data()
         except:
             pass
     
@@ -66,7 +57,7 @@ class SongPlayer:
         except:
             pass
 
-    def change_song(self, direction):
+    def change(self, direction):
         try:
             self.list_index += direction
             
@@ -80,14 +71,14 @@ class SongPlayer:
             pass
     
     def play_next(self):
-        self.change_song(1)
+        self.change(1)
 
     def play_previous(self):
-        self.change_song(-1) 
+        self.change(-1) 
 
-class FrameApp(Frame):
+class MP3App(Frame):
     def __init__(self,master):
-        super(FrameApp, self).__init__(master)
+        super(MP3App, self).__init__(master)
         self.grid()
         self.bg = 'AntiqueWhite1'
         self.width = 40
@@ -99,11 +90,21 @@ class FrameApp(Frame):
         self.song_player = SongPlayer()
         self.create_buttons()
 
+    def update_song_list_display(self):
+        self.text.delete(0.0, END)
+
+        for song in enumerate(self.song_player.list):
+            song_data = self.song_player.data(song)
+            self.text.insert(END, f"{song_data}\n")
+
     def add(self):
         self.song_player.add()
+        self.update_song_list_display()
 
     def play(self):
         self.song_player.play()
+        current_song = self.song_player.list[self.song_player.list_index]
+        self.label['text'] = self.song_player.data(current_song)
 
     def pause_toggle(self):
         self.song_player.pause_toggle()
@@ -125,7 +126,7 @@ class FrameApp(Frame):
     def create_buttons(self):
         functions_array = [self.add, self.play, self.pause_toggle, self.play_previous, self.play_next]
         
-        for index, action in enumerate(ButtonAction):
+        for index, action in enumerate(ButtonsActions):
             button = Button(self, 
                             text=action.value, 
                             command=functions_array[index],
@@ -136,7 +137,7 @@ class FrameApp(Frame):
 window = Tk()
 window.geometry("500x500")
 window.title("MP3 Music Player")
-app = FrameApp(window)
+app = MP3App(window)
 
 while True:
     app.check_song()
