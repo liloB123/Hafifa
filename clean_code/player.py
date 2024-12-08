@@ -10,25 +10,15 @@ class ButtonAction(Enum):
         PLAY_SONG = "PLAY SONG"
         PAUSE_UNPAUSE = "PAUSE/UNPAUSE"
         PREVIOUS_SONG = "PREVIOUS SONG"
-        NEXT_SONG = "NEXT SONG"   
+        NEXT_SONG = "NEXT SONG" 
 
-class FrameApp(Frame):
-    def __init__(self,master):
-        super(FrameApp, self).__init__(master)
-        self.grid()
-        self.bg = 'AntiqueWhite1'
-        self.width = 40
-        self.label = Label(self, fg='Black',font=('Helvetica 12 bold italic',10),bg='ivory2')
-        self.label.grid(row=6,column=0)
-        self.text = Text(self,wrap=WORD,width=60)
-        self.text.grid(row=8,column=0)
+class SongPlayer:
+    def __init__(self):
         self.list = list()
         self.pausing = False
         self.list_index = 0
         self.SONG_END = pygame.USEREVENT + 1
-
-        self.create_buttons()
-
+    
     def add(self):
         try:
             directory = askopenfilenames()
@@ -44,7 +34,7 @@ class FrameApp(Frame):
                 self.text.insert(END, song_data + '\n')
         except:
             pass
-
+    
     def song_data(self):
         try:
             song = EasyID3(self.list[self.list_index])
@@ -53,7 +43,7 @@ class FrameApp(Frame):
             return song_data
         except:
             pass
-    
+
     def play(self):
         try:
             directory = self.list[self.list_index]
@@ -65,15 +55,7 @@ class FrameApp(Frame):
         except:
             pass
     
-    def check_music(self):
-        try:
-            for event in pygame.event.get():
-                if event.type == self.SONG_END:
-                    self.next()
-        except:
-            pass
-    
-    def pause_unpause(self):
+    def pause_toggle(self):
         try:
             if self.pausing:
                 pygame.mixer.music.unpause()
@@ -83,41 +65,65 @@ class FrameApp(Frame):
                 self.pausing = True
         except:
             pass
-    
-    def get_next_song(self):
-        try:
-            if self.list_index + 2 <= len(self.list):
-                return self.list_index + 1
-            else:
-                return 0
-        except:
-            pass
-    
-    def next(self):
-        try:
-            self.list_index = self.get_next_song()
-            self.play()
-        except:
-            pass
-    
-    def get_previous_song(self):
-        try:
-            if self.list_index - 1 >= 0:
-                return self.list_index - 1
-            else:
-                return len(self.list) - 1
-        except:
-            pass
 
-    def previous(self):
+    def change_song(self, direction):
         try:
-            self.list_index = self.get_previous_song()
+            self.list_index += direction
+            
+            if self.list_index >= len(self.list):
+                self.list_index = 0
+            elif self.list_index < 0:
+                self.list_index = len(self.list) - 1
+
             self.play()
         except:
-            pass  
+            pass
+    
+    def play_next(self):
+        self.change_song(1)
+
+    def play_previous(self):
+        self.change_song(-1) 
+
+class FrameApp(Frame):
+    def __init__(self,master):
+        super(FrameApp, self).__init__(master)
+        self.grid()
+        self.bg = 'AntiqueWhite1'
+        self.width = 40
+        self.label = Label(self, fg='Black',font=('Helvetica 12 bold italic',10),bg='ivory2')
+        self.label.grid(row=6,column=0)
+        self.text = Text(self,wrap=WORD,width=60)
+        self.text.grid(row=8,column=0)
+
+        self.song_player = SongPlayer()
+        self.create_buttons()
+
+    def add(self):
+        self.song_player.add()
+
+    def play(self):
+        self.song_player.play()
+
+    def pause_toggle(self):
+        self.song_player.pause_toggle()
+
+    def play_next(self):
+        self.song_player.play_next()
+
+    def play_previous(self):
+        self.song_player.play_previous()
+    
+    def check_song(self):
+        try:
+            for event in pygame.event.get():
+                if event.type == self.song_player.SONG_END:
+                    self.play_next()
+        except:
+            pass
       
     def create_buttons(self):
-        functions_array = [self.add, self.play, self.pause_unpause, self.previous, self.next]
+        functions_array = [self.add, self.play, self.pause_toggle, self.play_previous, self.play_next]
         
         for index, action in enumerate(ButtonAction):
             button = Button(self, 
@@ -133,5 +139,5 @@ window.title("MP3 Music Player")
 app = FrameApp(window)
 
 while True:
-    app.check_music()
+    app.check_song()
     app.update()
