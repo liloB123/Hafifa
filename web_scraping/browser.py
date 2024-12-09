@@ -9,7 +9,6 @@ import base64
 
 chrome_options = Options()
 chrome_options.add_argument("--headless")
-chrome_options.add_argument("--disable-gpu") 
 
 driver = webdriver.Chrome(options=chrome_options)
 
@@ -23,13 +22,13 @@ def get_resources(soup):
     resources = []
     
     for img in soup.find_all('img'):
-         src = img.get('src')
-         if src:
-              resources.append(src)
+        src = img.get('src')
+        if src:
+            resources.append(src)
     
     for link in soup.find_all('link', href=True):
-                href = link.get('href')
-                resources.append(href)
+        href = link.get('href')
+        resources.append(href)
 
     for script in soup.find_all('script', src=True):
         src = script.get('src')
