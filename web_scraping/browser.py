@@ -1,4 +1,5 @@
 from pathlib import Path
+import concurrent.futures
 import requests
 import json
 from bs4 import BeautifulSoup
@@ -6,19 +7,20 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 import base64
+import asyncio
+import aiohttp
 
 chrome_options = Options()
 chrome_options.add_argument("--headless")
 
-driver = webdriver.Chrome(options=chrome_options)
+directory = Path("output")
 
-def get_html(url):
-    response = requests.get(url)
-    response.raise_for_status()
+async def get_html(url, session):
+    async with session.get(url) as response:
+        response.raise_for_status()
+        return await response.text()
 
-    return response.text
-
-def get_resources(soup):
+async def get_resources(soup):
     resources = []
     
     for img in soup.find_all('img'):
@@ -37,10 +39,12 @@ def get_resources(soup):
     return resources
 
 def get_screenshot(url, dir_path):
+    driver = webdriver.Chrome(options=chrome_options)
     driver.get(url)
-    screenshot_file = Path("screenshot.png")
-    screenshot_path = dir_path / screenshot_file
+    driver.save_screenshot(str(dir_path / "screenshot.png"))
+    screenshot_path = dir_path / "screenshot.png"
 
+    driver.quit()
     return screenshot_path
 
 def encode_image(screenshot_path):
@@ -48,7 +52,7 @@ def encode_image(screenshot_path):
         screenshot_base64 = base64.b64encode(image_file.read()).decode('utf-8')
         return screenshot_base64
     
-def create_dir(index, url):
+async def create_dir(index, url, session, executor):
     dir_name = f"url_{index+1}"
 
     dir_path = directory / dir_name
@@ -56,10 +60,9 @@ def create_dir(index, url):
     dir_path.mkdir(parents=True, exist_ok=True)
 
     try:
-        screenshot_path = get_screenshot(url, dir_path)
-        driver.save_screenshot(str(screenshot_path))
+        screenshot_path = await asyncio.get_event_loop().run_in_executor(executor, get_screenshot, url, dir_path)
 
-        html_response = get_html(url)
+        html_response = await get_html(url, session)
 
         file_name = "browse.json"
 
@@ -69,7 +72,7 @@ def create_dir(index, url):
 
         json_data = {
             "html" : html_response,
-            "resources" : get_resources(soup),
+            "resources" : await get_resources(soup),
             "screenshot" : encode_image(screenshot_path)
         }
 
@@ -78,17 +81,22 @@ def create_dir(index, url):
     except requests.exceptions.RequestException as e:
             print(f"Error fetching {url}: {e}")
     
+async def main():
+    urls_path = Path("input/urls.input")
 
-urls_path = Path("input/urls.input")
+    if urls_path.exists():
+        clean_urls = [url.strip() for url in open(urls_path).readlines()]
 
-if urls_path.exists():
-    clean_urls = [url.strip() for url in open(urls_path).readlines()]
+        directory.mkdir(parents=True, exist_ok=True)
 
-    directory = Path("output")
-    directory.mkdir(parents=True, exist_ok=True)
+        with concurrent.futures.ThreadPoolExecutor() as executor:
+            async with aiohttp.ClientSession() as session:
+                tasks = [create_dir(index, url, session, executor) for index, url in enumerate(clean_urls)]
+                await asyncio.gather(*tasks)
 
-    for index, url in enumerate(clean_urls):
-        create_dir(index, url)
+    else:
+        print("The path for the urls does not exist")
 
-else:
-    print("The path for the urls does not exist")
+if __name__ == '__main__':
+    asyncio.run(main())
+
