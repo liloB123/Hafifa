@@ -1,3 +1,15 @@
+import logging
+
+logging.basicConfig(
+    level=logging.DEBUG,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('api.log')
+    ]
+)
+
+logger = logging.getLogger(__name__)
+
 def calculate_aqi(pm25, no2, co2):
     pm25_breakpoints = [
         (0, 12, 0, 50),
@@ -31,7 +43,7 @@ def calculate_aqi(pm25, no2, co2):
             if lower <= value <= upper:
                 return aqi_lower + (value - lower) * (aqi_upper - aqi_lower) / (upper - lower)
         return 500
-
+    
     pm25_aqi = calculate_sub_index(pm25, pm25_breakpoints)
     no2_aqi = calculate_sub_index(no2, no2_breakpoints)
     co2_aqi = calculate_sub_index(co2, co2_breakpoints)

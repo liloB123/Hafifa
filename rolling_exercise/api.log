@@ -1,0 +1,576 @@
+2024-12-11 12:58:21,542 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 12:58:21,542 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 12:58:21,542 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 12:58:21,542 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 12:58:21,542 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 12:58:21,542 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 12:58:21,542 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 12:58:21,542 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 12:58:21,543 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:259]
+2024-12-11 12:58:21,543 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 12:58:21,543 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 12:58:21,611 - functions - ERROR - There has been an atempt to insert duplicate data
+2024-12-11 13:00:07,428 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 13:00:07,428 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 13:00:07,429 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 13:00:07,429 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:00:07,429 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 13:00:07,429 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 13:00:07,429 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:00:07,429 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 13:00:07,429 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:261]
+2024-12-11 13:00:07,429 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 13:00:07,429 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 13:00:07,441 - functions - INFO - New data was inserted to the database
+2024-12-11 13:05:53,197 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 13:05:53,197 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 13:05:53,197 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 13:05:53,197 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:05:53,197 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 13:05:53,197 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 13:05:53,197 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:05:53,197 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 13:05:53,198 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:258]
+2024-12-11 13:05:53,198 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 13:05:53,198 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 13:05:53,274 - functions - ERROR - There has been a problem while trying to add data - (psycopg2.errors.NumericValueOutOfRange) integer out of range
+
+[SQL: INSERT INTO data (date, city, pm25, no2, co2) VALUES (%(date__0)s, %(city__0)s, %(pm25__0)s, %(no2__0)s, %(co2__0)s), (%(date__1)s, %(city__1)s, %(pm25__1)s, %(no2__1)s, %(co2__1)s), (%(date__2)s, %(city__2)s, %(pm25__2)s, %(no2__2)s, %(co2__2)s), (% ... 156 characters truncated ... (pm25__5)s, %(no2__5)s, %(co2__5)s), (%(date__6)s, %(city__6)s, %(pm25__6)s, %(no2__6)s, %(co2__6)s)]
+[parameters: {'date__0': '2024-11-23', 'no2__0': 85.0, 'co2__0': 410, 'city__0': 'Tel Mond', 'pm25__0': 60, 'date__1': '2024-11-23', 'no2__1': 98.0, 'co2__1': 435, 'city__1': 'Tzur Moshe', 'pm25__1': 68, 'date__2': '2024-11-23', 'no2__2': 75.0, 'co2__2': 400, 'city__2': 'Netanya', 'pm25__2': 50, 'date__3': '2024-11-23', 'no2__3': 87.0, 'co2__3': 415, 'city__3': 'Hod Hasharon', 'pm25__3': 57, 'date__4': '2024-11-23', 'no2__4': nan, 'co2__4': 430, 'city__4': 'Ganei Tikva', 'pm25__4': 62, 'date__5': '2024-11-23', 'no2__5': 110.0, 'co2__5': 460, 'city__5': 'Kefar Sava', 'pm25__5': 75, 'date__6': '2024-11-23', 'no2__6': 88.0, 'co2__6': 410, 'city__6': 'Rishon LeTsiyon', 'pm25__6': 60}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2024-12-11 13:06:17,574 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 13:06:17,574 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 13:06:17,575 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 13:06:17,575 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:06:17,575 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 13:06:17,575 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 13:06:17,575 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:06:17,575 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 13:06:17,575 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:258]
+2024-12-11 13:06:17,575 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 13:06:17,575 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 13:06:17,640 - functions - INFO - New data was inserted to the database
+2024-12-11 13:07:11,570 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 13:07:11,570 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 13:07:11,570 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 13:07:11,570 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:07:11,570 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 13:07:11,570 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 13:07:11,570 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:07:11,570 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 13:07:11,571 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:259]
+2024-12-11 13:07:11,571 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 13:07:11,571 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 13:07:11,586 - functions - INFO - corrupted lines -          date             city  PM2.5  NO2  CO2
+6  2024-11-19  Rishon LeTsiyon     66   98  NaN
+2024-12-11 13:07:11,640 - functions - ERROR - There has been an atempt to insert duplicate data
+2024-12-11 13:07:21,004 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 13:07:21,004 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 13:07:21,005 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 13:07:21,005 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:07:21,005 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 13:07:21,005 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 13:07:21,005 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:07:21,005 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 13:07:21,005 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:259]
+2024-12-11 13:07:21,006 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 13:07:21,006 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 13:07:21,011 - functions - INFO - corrupted lines -          date             city  PM2.5  NO2  CO2
+6  2024-11-19  Rishon LeTsiyon     66   98  NaN
+2024-12-11 13:07:21,014 - functions - INFO - New data was inserted to the database
+2024-12-11 13:08:38,208 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 13:08:38,209 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 13:08:38,209 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 13:08:38,209 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:08:38,209 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 13:08:38,209 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 13:08:38,210 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:08:38,210 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 13:08:38,210 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:260]
+2024-12-11 13:08:38,210 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 13:08:38,210 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 13:08:38,217 - functions - INFO - corrupted lines -          date          city  PM2.5    NO2    CO2
+3  2024-11-21  Hod Hasharon     65  100.0    NaN
+5  2024-11-21    Kefar Sava     74    NaN  455.0
+2024-12-11 13:08:38,220 - functions - INFO - New data was inserted to the database
+2024-12-11 13:16:41,487 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 13:16:41,488 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 13:16:41,488 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 13:16:41,488 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:16:41,488 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 13:16:41,488 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 13:16:41,488 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:16:41,488 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 13:16:41,489 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:260]
+2024-12-11 13:16:41,489 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 13:16:41,489 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 13:16:41,503 - functions - INFO - corrupted lines -          date          city  PM2.5    NO2    CO2
+3  2024-11-21  Hod Hasharon     65  100.0    NaN
+5  2024-11-21    Kefar Sava     74    NaN  455.0
+2024-12-11 13:17:24,356 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 13:17:24,356 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 13:17:24,356 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 13:17:24,356 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:17:24,356 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 13:17:24,356 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 13:17:24,356 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:17:24,356 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 13:17:24,357 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:260]
+2024-12-11 13:17:24,357 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 13:17:24,357 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 13:17:24,371 - functions - INFO - corrupted lines -          date          city  PM2.5    NO2    CO2
+3  2024-11-21  Hod Hasharon     65  100.0    NaN
+5  2024-11-21    Kefar Sava     74    NaN  455.0
+2024-12-11 13:17:45,417 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 13:17:45,417 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 13:17:45,417 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 13:17:45,418 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:17:45,418 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 13:17:45,418 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 13:17:45,418 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:17:45,418 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 13:17:45,418 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:260]
+2024-12-11 13:17:45,418 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 13:17:45,418 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 13:17:45,430 - functions - INFO - corrupted lines -          date          city  PM2.5    NO2    CO2
+3  2024-11-21  Hod Hasharon     65  100.0    NaN
+5  2024-11-21    Kefar Sava     74    NaN  455.0
+2024-12-11 13:18:32,078 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 13:18:32,078 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 13:18:32,078 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 13:18:32,078 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:18:32,078 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 13:18:32,078 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 13:18:32,078 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:18:32,078 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 13:18:32,078 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:260]
+2024-12-11 13:18:32,078 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 13:18:32,078 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 13:18:32,092 - functions - INFO - corrupted lines -          date          city  PM2.5    NO2    CO2
+3  2024-11-21  Hod Hasharon     65  100.0    NaN
+5  2024-11-21    Kefar Sava     74    NaN  455.0
+2024-12-11 13:18:48,009 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 13:18:48,010 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 13:18:48,010 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 13:18:48,010 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:18:48,010 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 13:18:48,010 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 13:18:48,010 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:18:48,010 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 13:18:48,010 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:260]
+2024-12-11 13:18:48,010 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 13:18:48,010 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 13:18:48,026 - functions - INFO - corrupted lines -          date          city  PM2.5    NO2    CO2
+3  2024-11-21  Hod Hasharon     65  100.0    NaN
+5  2024-11-21    Kefar Sava     74    NaN  455.0
+2024-12-11 13:18:59,079 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 13:18:59,080 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 13:18:59,080 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 13:18:59,080 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:18:59,080 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 13:18:59,080 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 13:18:59,080 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:18:59,080 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 13:18:59,082 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:258]
+2024-12-11 13:18:59,082 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2024-12-11 13:18:59,082 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 13:18:59,082 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 13:18:59,104 - functions - INFO - corrupted lines -          date          city  PM2.5    NO2    CO2
+3  2024-11-21  Hod Hasharon     65  100.0    NaN
+5  2024-11-21    Kefar Sava     74    NaN  455.0
+2024-12-11 13:19:14,987 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 13:19:14,987 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 13:19:14,987 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 13:19:14,987 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:19:14,987 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 13:19:14,987 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 13:19:14,987 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:19:14,988 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 13:19:14,988 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:260]
+2024-12-11 13:19:14,988 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 13:19:14,988 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 13:19:15,002 - functions - INFO - corrupted lines -          date          city  PM2.5    NO2    CO2
+3  2024-11-21  Hod Hasharon     65  100.0    NaN
+5  2024-11-21    Kefar Sava     74    NaN  455.0
+2024-12-11 13:19:20,996 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 13:19:20,996 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 13:19:20,996 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 13:19:20,996 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:19:20,996 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 13:19:20,996 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 13:19:20,996 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:19:20,996 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 13:19:20,997 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:260]
+2024-12-11 13:19:20,997 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 13:19:20,997 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 13:19:21,003 - functions - INFO - corrupted lines -          date          city  PM2.5    NO2    CO2
+3  2024-11-21  Hod Hasharon     65  100.0    NaN
+5  2024-11-21    Kefar Sava     74    NaN  455.0
+2024-12-11 13:19:44,156 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 13:19:44,158 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 13:19:44,158 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 13:19:44,158 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:19:44,158 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 13:19:44,158 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 13:19:44,158 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:19:44,158 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 13:19:44,158 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:260]
+2024-12-11 13:19:44,158 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 13:19:44,158 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 13:19:44,173 - functions - INFO - corrupted lines -          date          city  PM2.5    NO2    CO2
+3  2024-11-21  Hod Hasharon     65  100.0    NaN
+5  2024-11-21    Kefar Sava     74    NaN  455.0
+2024-12-11 13:19:56,864 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 13:19:56,864 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 13:19:56,864 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 13:19:56,864 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:19:56,865 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 13:19:56,865 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 13:19:56,865 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:19:56,865 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 13:19:56,865 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:260]
+2024-12-11 13:19:56,865 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 13:19:56,865 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 13:19:56,879 - functions - INFO - corrupted lines -          date          city  PM2.5    NO2    CO2
+3  2024-11-21  Hod Hasharon     65  100.0    NaN
+5  2024-11-21    Kefar Sava     74    NaN  455.0
+2024-12-11 13:20:09,169 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 13:20:09,170 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 13:20:09,170 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 13:20:09,170 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:20:09,170 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 13:20:09,170 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 13:20:09,170 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:20:09,170 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 13:20:09,170 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:260]
+2024-12-11 13:20:09,170 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 13:20:09,170 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 13:20:09,187 - functions - INFO - corrupted lines -          date          city  PM2.5    NO2    CO2
+3  2024-11-21  Hod Hasharon     65  100.0    NaN
+5  2024-11-21    Kefar Sava     74    NaN  455.0
+2024-12-11 13:20:59,765 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 13:20:59,765 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 13:20:59,765 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 13:20:59,765 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:20:59,765 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 13:20:59,765 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 13:20:59,765 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:20:59,765 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 13:20:59,765 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:260]
+2024-12-11 13:20:59,765 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 13:20:59,765 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 13:20:59,779 - functions - INFO - corrupted lines -          date          city  PM2.5    NO2    CO2
+3  2024-11-21  Hod Hasharon     65  100.0    NaN
+5  2024-11-21    Kefar Sava     74    NaN  455.0
+2024-12-11 13:21:17,086 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 13:21:17,086 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 13:21:17,086 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 13:21:17,086 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:21:17,086 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 13:21:17,087 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 13:21:17,087 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:21:17,087 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 13:21:17,087 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:260]
+2024-12-11 13:21:17,087 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 13:21:17,087 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 13:21:17,101 - functions - INFO - corrupted lines -          date          city  PM2.5    NO2    CO2
+3  2024-11-21  Hod Hasharon     65  100.0    NaN
+5  2024-11-21    Kefar Sava     74    NaN  455.0
+2024-12-11 13:24:44,497 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 13:24:44,497 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 13:24:44,497 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 13:24:44,498 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:24:44,498 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 13:24:44,498 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 13:24:44,498 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:24:44,498 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 13:24:44,498 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:260]
+2024-12-11 13:24:44,498 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 13:24:44,498 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 13:24:44,512 - functions - INFO - corrupted lines -          date          city  PM2.5    NO2    CO2
+3  2024-11-21  Hod Hasharon     65  100.0    NaN
+5  2024-11-21    Kefar Sava     74    NaN  455.0
+2024-12-11 13:25:00,273 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 13:25:00,273 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 13:25:00,273 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 13:25:00,273 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:25:00,273 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 13:25:00,273 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 13:25:00,273 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:25:00,273 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 13:25:00,273 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:260]
+2024-12-11 13:25:00,273 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 13:25:00,273 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 13:25:00,288 - functions - INFO - corrupted lines -          date          city  PM2.5    NO2    CO2
+3  2024-11-21  Hod Hasharon     65  100.0    NaN
+5  2024-11-21    Kefar Sava     74    NaN  455.0
+2024-12-11 13:25:00,289 - functions - ERROR - There has been a problem while trying to add data - '<=' not supported between instances of 'int' and 'list'
+2024-12-11 13:27:53,068 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 13:27:53,068 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 13:27:53,068 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 13:27:53,068 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:27:53,068 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 13:27:53,068 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 13:27:53,068 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 13:27:53,068 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 13:27:53,068 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:260]
+2024-12-11 13:27:53,069 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 13:27:53,069 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 13:27:53,083 - functions - INFO - corrupted lines -          date          city  PM2.5    NO2    CO2
+3  2024-11-21  Hod Hasharon     65  100.0    NaN
+5  2024-11-21    Kefar Sava     74    NaN  455.0
+2024-12-11 13:27:53,084 - functions - ERROR - There has been a problem while trying to add data - '<=' not supported between instances of 'int' and 'list'
+2024-12-11 14:02:16,136 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 14:02:16,136 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 14:02:16,137 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 14:02:16,137 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:02:16,137 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 14:02:16,137 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 14:02:16,137 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:02:16,137 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 14:02:16,138 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:260]
+2024-12-11 14:02:16,138 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 14:02:16,138 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 14:02:16,153 - functions - INFO - corrupted lines -          date          city  PM2.5    NO2    CO2
+3  2024-11-21  Hod Hasharon     65  100.0    NaN
+5  2024-11-21    Kefar Sava     74    NaN  455.0
+2024-12-11 14:02:16,214 - functions - ERROR - There has been a problem while trying to add data - (psycopg2.errors.NotNullViolation) null value in column "aqi" of relation "data" violates not-null constraint
+DETAIL:  Failing row contains (2024-11-21, Tel Mond, 62, 90, 430, null).
+
+[SQL: INSERT INTO data (date, city, pm25, no2, co2, aqi) VALUES (%(date__0)s, %(city__0)s, %(pm25__0)s, %(no2__0)s, %(co2__0)s, %(aqi__0)s), (%(date__1)s, %(city__1)s, %(pm25__1)s, %(no2__1)s, %(co2__1)s, %(aqi__1)s), (%(date__2)s, %(city__2)s, %(pm25__2)s, %(no2__2)s, %(co2__2)s, %(aqi__2)s), (%(date__3)s, %(city__3)s, %(pm25__3)s, %(no2__3)s, %(co2__3)s, %(aqi__3)s), (%(date__4)s, %(city__4)s, %(pm25__4)s, %(no2__4)s, %(co2__4)s, %(aqi__4)s)]
+[parameters: {'co2__0': 430.0, 'date__0': '2024-11-21', 'pm25__0': 62, 'aqi__0': None, 'city__0': 'Tel Mond', 'no2__0': 90.0, 'co2__1': 460.0, 'date__1': '2024-11-21', 'pm25__1': 75, 'aqi__1': None, 'city__1': 'Tzur Moshe', 'no2__1': 110.0, 'co2__2': 430.0, 'date__2': '2024-11-21', 'pm25__2': 60, 'aqi__2': None, 'city__2': 'Netanya', 'no2__2': 85.0, 'co2__3': 440.0, 'date__3': '2024-11-21', 'pm25__3': 65, 'aqi__3': None, 'city__3': 'Ganei Tikva', 'no2__3': 95.0, 'co2__4': 440.0, 'date__4': '2024-11-21', 'pm25__4': 70, 'aqi__4': None, 'city__4': 'Rishon LeTsiyon', 'no2__4': 105.0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-11 14:03:39,452 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 14:03:39,452 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 14:03:39,452 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 14:03:39,452 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:03:39,452 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 14:03:39,452 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 14:03:39,452 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:03:39,452 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 14:03:39,452 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:260]
+2024-12-11 14:03:39,452 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 14:03:39,452 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 14:03:39,467 - functions - INFO - corrupted lines -          date          city  PM2.5    NO2    CO2
+3  2024-11-21  Hod Hasharon     65  100.0    NaN
+5  2024-11-21    Kefar Sava     74    NaN  455.0
+2024-12-11 14:03:39,522 - functions - ERROR - There has been a problem while trying to add data - (psycopg2.errors.DatatypeMismatch) column "aqi" is of type double precision but expression is of type record
+LINE 1: ...ALUES ('2024-11-21', 'Tel Mond', 62, 90.0, 430.0, (500, 'Haz...
+                                                             ^
+HINT:  You will need to rewrite or cast the expression.
+
+[SQL: INSERT INTO data (date, city, pm25, no2, co2, aqi) VALUES (%(date__0)s, %(city__0)s, %(pm25__0)s, %(no2__0)s, %(co2__0)s, %(aqi__0)s), (%(date__1)s, %(city__1)s, %(pm25__1)s, %(no2__1)s, %(co2__1)s, %(aqi__1)s), (%(date__2)s, %(city__2)s, %(pm25__2)s, %(no2__2)s, %(co2__2)s, %(aqi__2)s), (%(date__3)s, %(city__3)s, %(pm25__3)s, %(no2__3)s, %(co2__3)s, %(aqi__3)s), (%(date__4)s, %(city__4)s, %(pm25__4)s, %(no2__4)s, %(co2__4)s, %(aqi__4)s)]
+[parameters: {'co2__0': 430.0, 'no2__0': 90.0, 'city__0': 'Tel Mond', 'date__0': '2024-11-21', 'aqi__0': (500, 'Hazardous'), 'pm25__0': 62, 'co2__1': 460.0, 'no2__1': 110.0, 'city__1': 'Tzur Moshe', 'date__1': '2024-11-21', 'aqi__1': (500, 'Hazardous'), 'pm25__1': 75, 'co2__2': 430.0, 'no2__2': 85.0, 'city__2': 'Netanya', 'date__2': '2024-11-21', 'aqi__2': (500, 'Hazardous'), 'pm25__2': 60, 'co2__3': 440.0, 'no2__3': 95.0, 'city__3': 'Ganei Tikva', 'date__3': '2024-11-21', 'aqi__3': (500, 'Hazardous'), 'pm25__3': 65, 'co2__4': 440.0, 'no2__4': 105.0, 'city__4': 'Rishon LeTsiyon', 'date__4': '2024-11-21', 'aqi__4': (500, 'Hazardous'), 'pm25__4': 70}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-12-11 14:04:21,778 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 14:04:21,778 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 14:04:21,778 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 14:04:21,778 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:04:21,778 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 14:04:21,778 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 14:04:21,778 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:04:21,778 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 14:04:21,778 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:260]
+2024-12-11 14:04:21,778 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 14:04:21,778 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 14:04:21,797 - functions - INFO - corrupted lines -          date          city  PM2.5    NO2    CO2
+3  2024-11-21  Hod Hasharon     65  100.0    NaN
+5  2024-11-21    Kefar Sava     74    NaN  455.0
+2024-12-11 14:04:21,798 - functions - ERROR - There has been a problem while trying to add data - tuple indices must be integers or slices, not str
+2024-12-11 14:05:16,744 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 14:05:16,744 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 14:05:16,744 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 14:05:16,744 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:05:16,744 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 14:05:16,744 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 14:05:16,744 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:05:16,744 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 14:05:16,745 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:260]
+2024-12-11 14:05:16,745 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 14:05:16,745 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 14:05:16,760 - functions - INFO - corrupted lines -          date          city  PM2.5    NO2    CO2
+3  2024-11-21  Hod Hasharon     65  100.0    NaN
+5  2024-11-21    Kefar Sava     74    NaN  455.0
+2024-12-11 14:05:16,816 - functions - ERROR - There has been a problem while trying to add data - (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type double precision: "Hazardous"
+LINE 1: ...ALUES ('2024-11-21', 'Tel Mond', 62, 90.0, 430.0, 'Hazardous...
+                                                             ^
+
+[SQL: INSERT INTO data (date, city, pm25, no2, co2, aqi) VALUES (%(date__0)s, %(city__0)s, %(pm25__0)s, %(no2__0)s, %(co2__0)s, %(aqi__0)s), (%(date__1)s, %(city__1)s, %(pm25__1)s, %(no2__1)s, %(co2__1)s, %(aqi__1)s), (%(date__2)s, %(city__2)s, %(pm25__2)s, %(no2__2)s, %(co2__2)s, %(aqi__2)s), (%(date__3)s, %(city__3)s, %(pm25__3)s, %(no2__3)s, %(co2__3)s, %(aqi__3)s), (%(date__4)s, %(city__4)s, %(pm25__4)s, %(no2__4)s, %(co2__4)s, %(aqi__4)s)]
+[parameters: {'co2__0': 430.0, 'no2__0': 90.0, 'city__0': 'Tel Mond', 'date__0': '2024-11-21', 'pm25__0': 62, 'aqi__0': 'Hazardous', 'co2__1': 460.0, 'no2__1': 110.0, 'city__1': 'Tzur Moshe', 'date__1': '2024-11-21', 'pm25__1': 75, 'aqi__1': 'Hazardous', 'co2__2': 430.0, 'no2__2': 85.0, 'city__2': 'Netanya', 'date__2': '2024-11-21', 'pm25__2': 60, 'aqi__2': 'Hazardous', 'co2__3': 440.0, 'no2__3': 95.0, 'city__3': 'Ganei Tikva', 'date__3': '2024-11-21', 'pm25__3': 65, 'aqi__3': 'Hazardous', 'co2__4': 440.0, 'no2__4': 105.0, 'city__4': 'Rishon LeTsiyon', 'date__4': '2024-11-21', 'pm25__4': 70, 'aqi__4': 'Hazardous'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2024-12-11 14:05:35,770 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 14:05:35,770 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 14:05:35,770 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 14:05:35,770 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:05:35,770 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 14:05:35,770 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 14:05:35,770 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:05:35,770 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 14:05:35,770 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:260]
+2024-12-11 14:05:35,770 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 14:05:35,770 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 14:05:35,785 - functions - INFO - corrupted lines -          date          city  PM2.5    NO2    CO2
+3  2024-11-21  Hod Hasharon     65  100.0    NaN
+5  2024-11-21    Kefar Sava     74    NaN  455.0
+2024-12-11 14:05:35,843 - functions - INFO - New data was inserted to the database
+2024-12-11 14:06:04,175 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 14:06:04,175 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 14:06:04,175 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 14:06:04,175 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:06:04,175 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 14:06:04,175 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 14:06:04,175 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:06:04,175 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 14:06:04,176 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:261]
+2024-12-11 14:06:04,176 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 14:06:04,176 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 14:06:04,179 - functions - INFO - corrupted lines - Empty DataFrame
+Columns: [date, city, PM2.5, NO2, CO2]
+Index: []
+2024-12-11 14:06:04,186 - functions - INFO - New data was inserted to the database
+2024-12-11 14:06:25,848 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 14:06:25,848 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 14:06:25,849 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 14:06:25,849 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:06:25,849 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 14:06:25,849 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 14:06:25,849 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:06:25,849 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 14:06:25,849 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:260]
+2024-12-11 14:06:25,849 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 14:06:25,849 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 14:06:25,849 - python_multipart.multipart - DEBUG - Calling on_header_field with data[316:335]
+2024-12-11 14:06:25,849 - python_multipart.multipart - DEBUG - Calling on_header_value with data[337:398]
+2024-12-11 14:06:25,849 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:06:25,849 - python_multipart.multipart - DEBUG - Calling on_header_field with data[400:412]
+2024-12-11 14:06:25,849 - python_multipart.multipart - DEBUG - Calling on_header_value with data[414:422]
+2024-12-11 14:06:25,849 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:06:25,849 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 14:06:25,849 - python_multipart.multipart - DEBUG - Calling on_part_data with data[426:680]
+2024-12-11 14:06:25,849 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 14:06:25,849 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 14:06:25,849 - python_multipart.multipart - DEBUG - Calling on_header_field with data[736:755]
+2024-12-11 14:06:25,849 - python_multipart.multipart - DEBUG - Calling on_header_value with data[757:818]
+2024-12-11 14:06:25,849 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:06:25,849 - python_multipart.multipart - DEBUG - Calling on_header_field with data[820:832]
+2024-12-11 14:06:25,849 - python_multipart.multipart - DEBUG - Calling on_header_value with data[834:842]
+2024-12-11 14:06:25,849 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:06:25,850 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 14:06:25,850 - python_multipart.multipart - DEBUG - Calling on_part_data with data[846:1102]
+2024-12-11 14:06:25,850 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2024-12-11 14:06:25,850 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 14:06:25,850 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 14:06:25,850 - python_multipart.multipart - DEBUG - Calling on_header_field with data[56:75]
+2024-12-11 14:06:25,850 - python_multipart.multipart - DEBUG - Calling on_header_value with data[77:138]
+2024-12-11 14:06:25,850 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:06:25,850 - python_multipart.multipart - DEBUG - Calling on_header_field with data[140:152]
+2024-12-11 14:06:25,850 - python_multipart.multipart - DEBUG - Calling on_header_value with data[154:162]
+2024-12-11 14:06:25,850 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:06:25,850 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 14:06:25,850 - python_multipart.multipart - DEBUG - Calling on_part_data with data[166:396]
+2024-12-11 14:06:25,850 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 14:06:25,850 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 14:06:25,854 - functions - INFO - corrupted lines - Empty DataFrame
+Columns: [date, city, PM2.5, NO2, CO2]
+Index: []
+2024-12-11 14:06:25,861 - functions - INFO - New data was inserted to the database
+2024-12-11 14:07:37,437 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 14:07:37,439 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 14:07:37,439 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 14:07:37,439 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:07:37,439 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 14:07:37,439 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 14:07:37,439 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:07:37,439 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 14:07:37,439 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:260]
+2024-12-11 14:07:37,439 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 14:07:37,439 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 14:07:37,450 - functions - INFO - corrupted lines - Empty DataFrame
+Columns: [date, city, PM2.5, NO2, CO2]
+Index: []
+2024-12-11 14:07:37,511 - functions - INFO - New data was inserted to the database
+2024-12-11 14:08:07,127 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 14:08:07,128 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 14:08:07,128 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 14:08:07,128 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:08:07,128 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 14:08:07,128 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 14:08:07,128 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:08:07,128 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 14:08:07,128 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:260]
+2024-12-11 14:08:07,128 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 14:08:07,128 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 14:08:07,139 - functions - INFO - corrupted lines - Empty DataFrame
+Columns: [date, city, PM2.5, NO2, CO2]
+Index: []
+2024-12-11 14:08:07,197 - functions - INFO - New data was inserted to the database
+2024-12-11 14:09:43,916 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 14:09:43,916 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 14:09:43,916 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 14:09:43,916 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:09:43,917 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 14:09:43,918 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 14:09:43,918 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:09:43,918 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 14:09:43,918 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:255]
+2024-12-11 14:09:43,918 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 14:09:43,918 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 14:09:43,923 - functions - INFO - corrupted lines -          date             city  PM2.5  NO2  CO2
+6  2024-11-19  Rishon LeTsiyon     66   98  NaN
+2024-12-11 14:09:43,930 - functions - INFO - New data was inserted to the database
+2024-12-11 14:10:09,590 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 14:10:09,590 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 14:10:09,590 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 14:10:09,590 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:10:09,590 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 14:10:09,591 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 14:10:09,591 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:10:09,591 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 14:10:09,591 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:259]
+2024-12-11 14:10:09,591 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 14:10:09,591 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 14:10:09,597 - functions - INFO - corrupted lines -          date             city  PM2.5  NO2  CO2
+6  2024-11-19  Rishon LeTsiyon     66   98  NaN
+2024-12-11 14:10:09,602 - functions - INFO - New data was inserted to the database
+2024-12-11 14:10:28,625 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 14:10:28,625 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 14:10:28,625 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 14:10:28,625 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:10:28,625 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 14:10:28,625 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 14:10:28,625 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:10:28,625 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 14:10:28,625 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:259]
+2024-12-11 14:10:28,626 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 14:10:28,626 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 14:10:28,632 - functions - INFO - corrupted lines -          date             city  PM2.5  NO2  CO2
+6  2024-11-19  Rishon LeTsiyon     66   98  NaN
+2024-12-11 14:10:28,638 - functions - INFO - New data was inserted to the database
+2024-12-11 14:10:47,742 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 14:10:47,742 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 14:10:47,743 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 14:10:47,743 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:10:47,743 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 14:10:47,743 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 14:10:47,743 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:10:47,743 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 14:10:47,743 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:258]
+2024-12-11 14:10:47,743 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 14:10:47,743 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 14:10:47,748 - functions - INFO - corrupted lines -          date             city  PM2.5  NO2  CO2
+6  2024-11-19  Rishon LeTsiyon     66   98  NaN
+2024-12-11 14:10:47,755 - functions - INFO - New data was inserted to the database
+2024-12-11 14:11:47,101 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 14:11:47,101 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 14:11:47,101 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 14:11:47,101 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:11:47,101 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 14:11:47,101 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 14:11:47,101 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:11:47,101 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 14:11:47,102 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:255]
+2024-12-11 14:11:47,102 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 14:11:47,102 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 14:11:47,114 - functions - INFO - corrupted lines -          date             city  PM2.5  NO2  CO2
+6  2024-11-19  Rishon LeTsiyon     66   98  NaN
+2024-12-11 14:11:47,169 - functions - INFO - New data was inserted to the database
