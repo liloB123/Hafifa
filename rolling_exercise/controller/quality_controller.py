@@ -2,7 +2,7 @@ from sqlalchemy.orm import Session
 import pandas as pd
 import models
 from fastapi import HTTPException
-from functions import logger, calculate_aqi
+from functions import logger, calculate_aqi, validate_date
 import datetime
 
 ALERT_AQI = 300
@@ -58,26 +58,14 @@ def get_qaulity_by_date(db:Session, start:str, end:str):
         if  rows:
             logger.info(f"{len(rows)} rows were returned for the date range {start}-{end}")
             return rows
-        else:
-            logger.error(f"There is no data about the date range {start}-{end}")
-            raise HTTPException(status_code=404, detail="There is no data about this date range")
+        
+        logger.error(f"There is no data about the date range {start}-{end}")
+        raise HTTPException(status_code=404, detail="There is no data about this date range")
     except HTTPException as e:
         raise e
     except Exception as e:
         logger.error(f"Could not get air quality for the date range {start}-{end}")
         raise HTTPException(status_code=500, detail=f"There has been a problem while getting info about the date - {e}")
-
-def validate_date(start:str, end:str):
-    try:
-        datetime.date.fromisoformat(start)
-        datetime.date.fromisoformat(end)
-
-        if start > end:
-            logger.error("Received start day that is later than end date")
-            raise HTTPException(status_code=403, detail="Start date can not be later than end date")
-    except ValueError:
-        logger.error("An invalid date format was received")
-        raise HTTPException(status_code=403, detail="Incorrect data format, should be YYYY-MM-DD")
     
 def get_quality_by_city(db: Session, city:str):
     try:
@@ -86,11 +74,11 @@ def get_quality_by_city(db: Session, city:str):
         if rows:
             logger.info(f"{len(rows)} rows were returned for the city {city}")
             return rows  
-        else:
-            logger.error(f"There is no data about the city {city}")
-            raise HTTPException(status_code=404, detail="There is no data about this city")
+        
+        logger.error(f"There is no data about the city {city}")
+        raise HTTPException(status_code=404, detail="There is no data about this city")
+    except HTTPException as e:
+        raise e
     except Exception as e:
         logger.error(f"Could not get air quality for the city {city}")
         raise HTTPException(status_code=500, detail=f"There has been a problem while getting info about the city - {e}")
-
-

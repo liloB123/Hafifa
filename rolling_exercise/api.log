@@ -761,3 +761,37 @@ DETAIL:  Key (date, city)=(2024-11-23, Tel Mond) already exists.
 2024-12-11 15:12:05,661 - functions - INFO - 2 rows were returned for the city Tzur Moshe
 2024-12-11 15:15:57,879 - functions - ERROR - There is no data about the city 
 2024-12-11 15:15:57,879 - functions - ERROR - Could not get air quality for the city 
+2024-12-11 15:30:02,945 - functions - INFO - 2 aqis were returned for the city Tel Mond
+2024-12-11 16:02:24,376 - functions - INFO - 2 aqis were returned for the city Tel Mond
+2024-12-11 16:02:49,154 - functions - INFO - 2 aqis were returned for the city Tel Mond
+2024-12-11 16:04:29,148 - functions - INFO - 2 aqis were returned for the city Tel Mond
+2024-12-11 16:05:18,728 - functions - INFO - 2 aqis were returned for the city Tel Mond
+2024-12-11 16:05:53,353 - functions - ERROR - Could not get aqi for the city Tel Mond
+2024-12-11 16:06:05,009 - functions - INFO - 2 aqis were returned for the city Tel Mond
+2024-12-11 16:06:12,165 - functions - ERROR - Could not get aqi for the city Tel Mond
+2024-12-11 16:08:36,516 - functions - INFO - 2 aqis were returned for the city Tel Mond
+2024-12-11 16:08:49,801 - functions - INFO - 2 aqis were returned for the city Tel Mond
+2024-12-11 16:09:03,638 - functions - INFO - 2 aqis were returned for the city Tel Mond
+2024-12-11 16:09:23,944 - functions - INFO - 2 aqis were returned for the city Tel Mond
+2024-12-11 16:09:33,785 - functions - ERROR - There is no data about the aqi of the city Tel Mon
+2024-12-11 16:09:33,785 - functions - ERROR - Could not get aqi for the city Tel Mon
+2024-12-11 16:10:33,846 - functions - ERROR - There is no data about the aqi of the city Tel Mon
+2024-12-11 16:10:33,846 - functions - ERROR - Could not get aqi for the city Tel Mon
+2024-12-11 16:11:03,857 - functions - ERROR - Could not get aqi for the city Tel Mon
+2024-12-11 16:11:31,621 - functions - ERROR - There is no data about the aqi of the city Tel Mon
+2024-12-11 16:11:31,621 - functions - ERROR - Could not get aqi for the city Tel Mon
+2024-12-11 16:12:04,029 - functions - ERROR - There is no data about the aqi of the city Tel Mon
+2024-12-11 16:12:04,030 - functions - ERROR - Could not get aqi for the city Tel Mon
+2024-12-11 16:13:11,095 - functions - ERROR - An invalid date format was received
+2024-12-11 16:14:02,366 - functions - ERROR - There is no data about the aqi of the city Tel Mon
+2024-12-11 16:14:07,994 - functions - INFO - 2 aqis were returned for the city Tel Mond
+2024-12-11 16:14:17,428 - functions - ERROR - There is no data about the aqi of the city Tel mond
+2024-12-11 16:14:23,415 - functions - INFO - 2 aqis were returned for the city Hod Hasharon
+2024-12-11 16:14:32,621 - functions - INFO - 2 aqis were returned for the city Netanya
+2024-12-11 16:29:19,818 - functions - ERROR - There is no data about the aqi of the city Netnanya
+2024-12-11 16:29:35,727 - functions - INFO - Avergae aqi was returned for the city Netanya
+2024-12-11 16:55:06,079 - functions - INFO - Got 9 alerts
+2024-12-11 17:00:57,664 - functions - INFO - 9 rows were returned for the date range 2024-11-19-2024-11-23
+2024-12-11 17:01:11,434 - functions - INFO - 3 rows were returned for the date range 2024-11-19-2024-11-19
+2024-12-11 17:01:22,614 - functions - ERROR - Received start day that is later than end date
+2024-12-11 17:01:29,999 - functions - ERROR - An invalid date format was received

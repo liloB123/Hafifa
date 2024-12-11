@@ -1,4 +1,6 @@
 import logging
+import datetime
+from fastapi import HTTPException
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -62,3 +64,15 @@ def calculate_aqi(pm25, no2, co2):
     aqi_level = next(level for threshold, level in aqi_thresholds if overall_aqi <= threshold)
 
     return overall_aqi, aqi_level
+
+def validate_date(start:str, end:str):
+    try:
+        datetime.date.fromisoformat(start)
+        datetime.date.fromisoformat(end)
+
+        if start > end:
+            logger.error("Received start day that is later than end date")
+            raise HTTPException(status_code=403, detail="Start date can not be later than end date")
+    except ValueError:
+        logger.error("An invalid date format was received")
+        raise HTTPException(status_code=403, detail="Incorrect data format, should be YYYY-MM-DD")
