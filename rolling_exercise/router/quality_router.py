@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Depends, UploadFile, File, HTTPException
-from controller.quality_controller import insert_data_from_csv
+from controller.quality_controller import insert_data_from_csv, get_qaulity_by_date, get_quality_by_city
 import schemas
 from sqlalchemy.orm import Session
 from database import get_db
@@ -20,15 +20,22 @@ async def upload_data_route(file: UploadFile = File(...), db: Session = Depends(
         corrupted_data = data[~data.index.isin(clean_data.index)]
         logger.info(f"corrupted lines - {corrupted_data}")
 
-        response = insert_data_from_csv(db=db, df=clean_data)
+        response = await insert_data_from_csv(db=db, df=clean_data)
 
         return JSONResponse(content=response, status_code=201)   
     except Exception as e:
-        raise HTTPException(status_code=400, detail=f"Error uploading data - {e}")
+        raise e
 
-
-
-# # Route to get a specific Alert
-# @router.get("/{alert_id}", response_model=schemas.Alert)
-# def get_alert_route(alert_id: int, db: Session = Depends(get_db)):
-#     return get_alert(db=db, alert_id=alert_id)
+@router.get("/date", status_code=200)
+def get_quality_by_date_route(start_date: str, end_date: str, db: Session = Depends(get_db)):
+    try:
+        return get_qaulity_by_date(db, start_date, end_date)
+    except Exception as e:
+        return e
+    
+@router.get("/city", status_code=200)
+def get_quality_by_city_route(city: str, db: Session = Depends(get_db)):
+    try:
+        return get_quality_by_city(db, city)
+    except Exception as e:
+        return e

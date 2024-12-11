@@ -574,3 +574,190 @@ Index: []
 2024-12-11 14:11:47,114 - functions - INFO - corrupted lines -          date             city  PM2.5  NO2  CO2
 6  2024-11-19  Rishon LeTsiyon     66   98  NaN
 2024-12-11 14:11:47,169 - functions - INFO - New data was inserted to the database
+2024-12-11 14:18:38,008 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 14:18:38,009 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 14:18:38,009 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 14:18:38,009 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:18:38,009 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 14:18:38,010 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 14:18:38,010 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:18:38,010 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 14:18:38,010 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:255]
+2024-12-11 14:18:38,010 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 14:18:38,010 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 14:18:38,023 - functions - INFO - corrupted lines -          date             city  PM2.5  NO2  CO2
+6  2024-11-19  Rishon LeTsiyon     66   98  NaN
+2024-12-11 14:18:38,078 - functions - INFO - New alert was added for city Tzur Moshe at date 2024-11-19
+2024-12-11 14:18:38,081 - functions - INFO - New alert was added for city Hod Hasharon at date 2024-11-19
+2024-12-11 14:18:38,082 - functions - INFO - New alert was added for city Ganei Tikva at date 2024-11-19
+2024-12-11 14:18:38,084 - functions - INFO - New data was inserted to the database
+2024-12-11 14:39:02,934 - functions - ERROR - An invalid date format was received
+2024-12-11 14:39:02,935 - functions - ERROR - Could not get air quality for the date range 202-11-19-2024-11-19
+2024-12-11 14:39:31,394 - functions - ERROR - An invalid date format was received
+2024-12-11 14:39:31,394 - functions - ERROR - Could not get air quality for the date range 202-11-19-2024-11-19
+2024-12-11 14:39:52,753 - functions - ERROR - An invalid date format was received
+2024-12-11 14:39:52,753 - functions - ERROR - Could not get air quality for the date range 202-11-19-2024-11-19
+2024-12-11 14:40:39,823 - functions - ERROR - An invalid date format was received
+2024-12-11 14:40:39,823 - functions - ERROR - Could not get air quality for the date range 202-11-19-2024-11-19
+2024-12-11 14:41:03,267 - functions - ERROR - An invalid date format was received
+2024-12-11 14:41:03,267 - functions - ERROR - Could not get air quality for the date range 202-11-19-2024-11-19
+2024-12-11 14:42:29,651 - functions - ERROR - An invalid date format was received
+2024-12-11 14:42:29,651 - functions - ERROR - Could not get air quality for the date range 202-11-19-2024-11-19
+2024-12-11 14:44:18,281 - functions - ERROR - An invalid date format was received
+2024-12-11 14:44:18,281 - functions - ERROR - Could not get air quality for the date range 202-11-19-2024-11-19
+2024-12-11 14:47:28,339 - functions - ERROR - An invalid date format was received
+2024-12-11 14:47:44,586 - functions - ERROR - Could not get air quality for the date range 2024-11-19-2024-11-19
+2024-12-11 14:48:10,289 - functions - ERROR - Could not get air quality for the date range 2024-11-19-2024-11-19
+2024-12-11 14:48:35,729 - functions - ERROR - Could not get air quality for the date range 2024-11-19-2024-11-19
+2024-12-11 14:49:38,341 - functions - ERROR - Could not get air quality for the date range 2024-11-19-2024-11-19
+2024-12-11 14:50:33,658 - functions - INFO - 6 rows were returned for the date range 2024-11-19-2024-11-19
+2024-12-11 14:56:17,482 - functions - ERROR - Could not get air quality for the date range 2025-11-19-2024-11-19
+2024-12-11 14:56:37,190 - functions - ERROR - Received start day that is later than end date
+2024-12-11 14:56:55,053 - functions - INFO - 6 rows were returned for the date range 2024-11-19-2025-11-19
+2024-12-11 14:58:47,215 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 14:58:47,216 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 14:58:47,216 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 14:58:47,216 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:58:47,216 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 14:58:47,216 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 14:58:47,216 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:58:47,216 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 14:58:47,216 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:255]
+2024-12-11 14:58:47,216 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 14:58:47,216 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 14:58:47,233 - functions - INFO - corrupted lines -          date             city  PM2.5  NO2  CO2
+6  2024-11-19  Rishon LeTsiyon     66   98  NaN
+2024-12-11 14:58:47,299 - functions - ERROR - Could not add alert - (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "alerts_pkey"
+DETAIL:  Key (date, city)=(2024-11-19, Tzur Moshe) already exists.
+
+[SQL: INSERT INTO alerts (date, city, aqi) VALUES (%(date)s, %(city)s, %(aqi)s)]
+[parameters: {'date': '2024-11-19', 'city': 'Tzur Moshe', 'aqi': 500}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-11 14:58:47,299 - functions - ERROR - There has been a problem while trying to add data - 500: Colud not add alert
+2024-12-11 14:59:12,128 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 14:59:12,128 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 14:59:12,128 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 14:59:12,128 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:59:12,128 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 14:59:12,128 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 14:59:12,128 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:59:12,128 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 14:59:12,128 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:255]
+2024-12-11 14:59:12,128 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 14:59:12,128 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 14:59:12,143 - functions - INFO - corrupted lines -          date             city  PM2.5  NO2  CO2
+6  2024-11-19  Rishon LeTsiyon     66   98  NaN
+2024-12-11 14:59:12,195 - functions - ERROR - Could not add alert - (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "alerts_pkey"
+DETAIL:  Key (date, city)=(2024-11-19, Tzur Moshe) already exists.
+
+[SQL: INSERT INTO alerts (date, city, aqi) VALUES (%(date)s, %(city)s, %(aqi)s)]
+[parameters: {'date': '2024-11-19', 'city': 'Tzur Moshe', 'aqi': 500}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-11 14:59:12,195 - functions - ERROR - There has been a problem while trying to add data - 500: Colud not add alert
+2024-12-11 14:59:30,193 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 14:59:30,193 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 14:59:30,194 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 14:59:30,194 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:59:30,194 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 14:59:30,194 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 14:59:30,194 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:59:30,194 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 14:59:30,194 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:255]
+2024-12-11 14:59:30,194 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 14:59:30,194 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 14:59:30,207 - functions - INFO - corrupted lines -          date             city  PM2.5  NO2  CO2
+6  2024-11-19  Rishon LeTsiyon     66   98  NaN
+2024-12-11 14:59:30,256 - functions - ERROR - Could not add alert - (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "alerts_pkey"
+DETAIL:  Key (date, city)=(2024-11-19, Tzur Moshe) already exists.
+
+[SQL: INSERT INTO alerts (date, city, aqi) VALUES (%(date)s, %(city)s, %(aqi)s)]
+[parameters: {'date': '2024-11-19', 'city': 'Tzur Moshe', 'aqi': 500}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-11 14:59:30,256 - functions - ERROR - There has been a problem while trying to add data - 500: Colud not add alert
+2024-12-11 14:59:36,119 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 14:59:36,119 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 14:59:36,119 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 14:59:36,119 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:59:36,119 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 14:59:36,119 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 14:59:36,120 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 14:59:36,120 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 14:59:36,120 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:255]
+2024-12-11 14:59:36,120 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 14:59:36,120 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 14:59:36,134 - functions - INFO - corrupted lines -          date             city  PM2.5  NO2  CO2
+6  2024-11-19  Rishon LeTsiyon     66   98  NaN
+2024-12-11 14:59:36,183 - functions - ERROR - Could not add alert - (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "alerts_pkey"
+DETAIL:  Key (date, city)=(2024-11-19, Tzur Moshe) already exists.
+
+[SQL: INSERT INTO alerts (date, city, aqi) VALUES (%(date)s, %(city)s, %(aqi)s)]
+[parameters: {'date': '2024-11-19', 'city': 'Tzur Moshe', 'aqi': 500}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-11 14:59:36,183 - functions - ERROR - There has been a problem while trying to add data - 500: Colud not add alert
+2024-12-11 15:01:04,942 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 15:01:04,942 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 15:01:04,943 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 15:01:04,943 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 15:01:04,943 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 15:01:04,943 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 15:01:04,943 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 15:01:04,943 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 15:01:04,943 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:255]
+2024-12-11 15:01:04,943 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 15:01:04,943 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 15:01:04,956 - functions - INFO - corrupted lines -          date             city  PM2.5  NO2  CO2
+6  2024-11-19  Rishon LeTsiyon     66   98  NaN
+2024-12-11 15:01:05,007 - functions - ERROR - Could not add alert - (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "alerts_pkey"
+DETAIL:  Key (date, city)=(2024-11-19, Tzur Moshe) already exists.
+
+[SQL: INSERT INTO alerts (date, city, aqi) VALUES (%(date)s, %(city)s, %(aqi)s)]
+[parameters: {'date': '2024-11-19', 'city': 'Tzur Moshe', 'aqi': 500}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-11 15:01:05,007 - functions - ERROR - There has been a problem while trying to add data - 500: Colud not add alert
+2024-12-11 15:01:13,775 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 15:01:13,776 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 15:01:13,776 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 15:01:13,776 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 15:01:13,776 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 15:01:13,776 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 15:01:13,776 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 15:01:13,776 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 15:01:13,776 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:258]
+2024-12-11 15:01:13,776 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 15:01:13,776 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 15:01:13,782 - functions - INFO - corrupted lines -          date         city  PM2.5  NO2  CO2
+4  2024-11-23  Ganei Tikva     62  NaN  430
+2024-12-11 15:01:13,788 - functions - INFO - New alert was added for city Tel Mond at date 2024-11-23
+2024-12-11 15:01:13,789 - functions - INFO - New alert was added for city Tzur Moshe at date 2024-11-23
+2024-12-11 15:01:13,791 - functions - INFO - New alert was added for city Netanya at date 2024-11-23
+2024-12-11 15:01:13,792 - functions - INFO - New alert was added for city Hod Hasharon at date 2024-11-23
+2024-12-11 15:01:13,795 - functions - INFO - New alert was added for city Kefar Sava at date 2024-11-23
+2024-12-11 15:01:13,796 - functions - INFO - New alert was added for city Rishon LeTsiyon at date 2024-11-23
+2024-12-11 15:01:13,797 - functions - INFO - New data was inserted to the database
+2024-12-11 15:04:52,794 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-11 15:04:52,795 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-11 15:04:52,795 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-11 15:04:52,795 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 15:04:52,795 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-11 15:04:52,795 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-11 15:04:52,795 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-11 15:04:52,795 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-11 15:04:52,796 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:258]
+2024-12-11 15:04:52,796 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-11 15:04:52,796 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-11 15:04:52,813 - functions - INFO - corrupted lines -          date         city  PM2.5  NO2  CO2
+4  2024-11-23  Ganei Tikva     62  NaN  430
+2024-12-11 15:04:52,977 - functions - ERROR - Could not add alert - (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "alerts_pkey"
+DETAIL:  Key (date, city)=(2024-11-23, Tel Mond) already exists.
+
+[SQL: INSERT INTO alerts (date, city, aqi) VALUES (%(date)s, %(city)s, %(aqi)s)]
+[parameters: {'date': '2024-11-23', 'city': 'Tel Mond', 'aqi': 500}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-11 15:04:52,977 - functions - ERROR - There has been a problem while trying to add data - 500: Colud not add alert
+2024-12-11 15:10:44,692 - functions - INFO - 12 rows were returned for the date range 2024-11-19-2025-11-19
+2024-12-11 15:11:34,494 - functions - INFO - 2 rows were returned for the city Tel Mond
+2024-12-11 15:11:39,766 - functions - ERROR - There is no data about the city Tel Mon
+2024-12-11 15:11:39,766 - functions - ERROR - Could not get air quality for the city Tel Mon
+2024-12-11 15:12:05,661 - functions - INFO - 2 rows were returned for the city Tzur Moshe
+2024-12-11 15:15:57,879 - functions - ERROR - There is no data about the city 
+2024-12-11 15:15:57,879 - functions - ERROR - Could not get air quality for the city 

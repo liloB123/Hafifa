@@ -3,10 +3,11 @@ import pandas as pd
 import models
 from fastapi import HTTPException
 from functions import logger, calculate_aqi
+import datetime
 
 ALERT_AQI = 300
 
-def insert_data_from_csv(db: Session, df: pd.DataFrame):
+async def insert_data_from_csv(db:Session, df:pd.DataFrame):
     try:
         for _, row in df.iterrows():
             aqi = calculate_aqi(row['PM2.5'], row['NO2'], row['CO2'])[0]
@@ -29,9 +30,9 @@ def insert_data_from_csv(db: Session, df: pd.DataFrame):
         return {"message": "Data added successfully!"}
     except Exception as e:
         logger.error(f"There has been a problem while trying to add data - {e}")
-        raise HTTPException(status_code=400, detail="Could not upload the data")
+        raise HTTPException(status_code=400, detail=f"Could not upload the data - {e}")
     
-def check_if_alert(db: Session, date, city, aqi):
+def check_if_alert(db:Session, date, city, aqi):
     try:
         if aqi > ALERT_AQI:
             alert = models.Alert(
@@ -46,6 +47,50 @@ def check_if_alert(db: Session, date, city, aqi):
             logger.info(f"New alert was added for city {city} at date {date}")
     except Exception as e:
         logger.error(f"Could not add alert - {e}")
-        raise HTTPException(status_code=400, detail="Colud not add alert")
+        raise HTTPException(status_code=500, detail="Colud not add alert")
     
+def get_qaulity_by_date(db:Session, start:str, end:str):
+    try:
+        validate_date(start, end)
+
+        rows = db.query(models.Data).filter(models.Data.date >= start, models.Data.date <= end).all()
+
+        if  rows:
+            logger.info(f"{len(rows)} rows were returned for the date range {start}-{end}")
+            return rows
+        else:
+            logger.error(f"There is no data about the date range {start}-{end}")
+            raise HTTPException(status_code=404, detail="There is no data about this date range")
+    except HTTPException as e:
+        raise e
+    except Exception as e:
+        logger.error(f"Could not get air quality for the date range {start}-{end}")
+        raise HTTPException(status_code=500, detail=f"There has been a problem while getting info about the date - {e}")
+
+def validate_date(start:str, end:str):
+    try:
+        datetime.date.fromisoformat(start)
+        datetime.date.fromisoformat(end)
+
+        if start > end:
+            logger.error("Received start day that is later than end date")
+            raise HTTPException(status_code=403, detail="Start date can not be later than end date")
+    except ValueError:
+        logger.error("An invalid date format was received")
+        raise HTTPException(status_code=403, detail="Incorrect data format, should be YYYY-MM-DD")
+    
+def get_quality_by_city(db: Session, city:str):
+    try:
+        rows = db.query(models.Data).filter(models.Data.city == city).all()
+
+        if rows:
+            logger.info(f"{len(rows)} rows were returned for the city {city}")
+            return rows  
+        else:
+            logger.error(f"There is no data about the city {city}")
+            raise HTTPException(status_code=404, detail="There is no data about this city")
+    except Exception as e:
+        logger.error(f"Could not get air quality for the city {city}")
+        raise HTTPException(status_code=500, detail=f"There has been a problem while getting info about the city - {e}")
+
 
