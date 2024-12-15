@@ -2,7 +2,7 @@ from sqlalchemy.orm import Session
 import pandas as pd
 import models
 from fastapi import HTTPException
-from functions import logger, calculate_aqi, validate_date
+from functions import logger, calculate_aqi, validate_date, validate_query_params
 import datetime
 
 ALERT_AQI = 300
@@ -51,6 +51,14 @@ def check_if_alert(db:Session, date, city, aqi):
     
 def get_qaulity_by_date(db:Session, start:str, end:str):
     try:
+        missing_params = validate_query_params({
+            "start_date" : start,
+            "end-date" : end
+        })
+
+        if missing_params:
+            raise HTTPException(status_code=422, detail=f"Missing query parameters: {', '.join(missing_params)}")
+        
         validate_date(start, end)
 
         rows = db.query(models.Data).filter(models.Data.date >= start, models.Data.date <= end).all()
@@ -69,6 +77,13 @@ def get_qaulity_by_date(db:Session, start:str, end:str):
     
 def get_quality_by_city(db: Session, city:str):
     try:
+        missing_params = validate_query_params({
+            "city" : city,
+        })
+
+        if missing_params:
+            raise HTTPException(status_code=422, detail=f"Missing query parameters: {', '.join(missing_params)}")
+        
         rows = db.query(models.Data).filter(models.Data.city == city).all()
 
         if rows:

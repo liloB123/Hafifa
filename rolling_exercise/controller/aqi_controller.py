@@ -2,11 +2,18 @@ from sqlalchemy.orm import Session
 import pandas as pd
 import models
 from fastapi import HTTPException
-from functions import logger, calculate_aqi
+from functions import logger, calculate_aqi, validate_query_params
 import numpy as np
 
 def get_aqi_by_city(db: Session, city: str):
     try:
+        missing_params = validate_query_params({
+            "city" : city,
+        })
+
+        if missing_params:
+            raise HTTPException(status_code=422, detail=f"Missing query parameters: {', '.join(missing_params)}")
+        
         aqis = get_aqis(db, city)
 
         if aqis:
@@ -20,6 +27,13 @@ def get_aqi_by_city(db: Session, city: str):
 
 def get_aqi_average(db: Session, city: str):
     try:
+        missing_params = validate_query_params({
+            "city" : city,
+        })
+
+        if missing_params:
+            raise HTTPException(status_code=422, detail=f"Missing query parameters: {', '.join(missing_params)}")
+        
         aqis = get_aqis(db, city)
         avergae = np.average(aqis)
 
@@ -35,8 +49,17 @@ def get_aqi_average(db: Session, city: str):
 
 def get_aqis(db: Session, city: str):
     try:
+        missing_params = validate_query_params({
+            "city" : city,
+        })
+
+        if missing_params:
+            raise HTTPException(status_code=422, detail=f"Missing query parameters: {', '.join(missing_params)}")
+        
         rows = db.query(models.Data).filter(models.Data.city == city).with_entities(models.Data.aqi).all()
         aqis = [row[0] for row in rows]
+
+        print(f"this is it: {aqis}")
 
         return aqis
     except Exception as e:
@@ -52,6 +75,8 @@ def get_best_cities(db: Session):
             raise HTTPException(status_code=404, detail="There is no data about the aqis")
         
         best_cities = sorted(rows, key=lambda x: x[1])[:3]
+
+        print(best_cities)
 
         output = [{"city": city, "aqi": aqi} for city, aqi in best_cities]
 

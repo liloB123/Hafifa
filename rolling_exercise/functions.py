@@ -1,6 +1,8 @@
 import logging
 import datetime
 from fastapi import HTTPException
+from typing import List, Dict
+
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -76,3 +78,9 @@ def validate_date(start:str, end:str):
     except ValueError:
         logger.error("An invalid date format was received")
         raise HTTPException(status_code=403, detail="Incorrect data format, should be YYYY-MM-DD")
+    
+
+def validate_query_params(params: Dict[str, str]) -> List[str]:
+    null_params = [param for param, value in params.items() if value is None]
+    
+    return null_params

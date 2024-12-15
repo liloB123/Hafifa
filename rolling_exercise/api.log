@@ -795,3 +795,56 @@ DETAIL:  Key (date, city)=(2024-11-23, Tel Mond) already exists.
 2024-12-11 17:01:11,434 - functions - INFO - 3 rows were returned for the date range 2024-11-19-2024-11-19
 2024-12-11 17:01:22,614 - functions - ERROR - Received start day that is later than end date
 2024-12-11 17:01:29,999 - functions - ERROR - An invalid date format was received
+2024-12-11 17:05:35,074 - functions - INFO - 1 alerts were returned of the city Tel Mond
+2024-12-11 17:05:55,214 - functions - INFO - 2 alerts were returned of the city Tzur Moshe
+2024-12-11 17:06:00,118 - functions - ERROR - There are no alerts of the city Tzur Mosh
+2024-12-11 17:06:06,627 - functions - INFO - 2 alerts were returned of the city Tzur Moshe
+2024-12-15 10:15:57,316 - functions - INFO - 2 aqis were returned for the city Netanya
+2024-12-15 10:39:30,431 - functions - INFO - Got 9 alerts
+2024-12-15 10:40:07,392 - functions - ERROR - There are no alerts
+2024-12-15 10:40:07,392 - functions - ERROR - Could not get alerts
+2024-12-15 10:40:09,757 - functions - ERROR - There are no alerts
+2024-12-15 10:40:09,757 - functions - ERROR - Could not get alerts
+2024-12-15 10:40:31,395 - functions - ERROR - There are no alerts
+2024-12-15 10:40:31,395 - functions - ERROR - Could not get alerts
+2024-12-15 10:40:58,153 - functions - ERROR - There are no alerts
+2024-12-15 10:40:58,153 - functions - ERROR - Could not get alerts
+2024-12-15 10:41:15,614 - functions - ERROR - There are no alerts
+2024-12-15 10:42:10,740 - functions - ERROR - There are no alerts
+2024-12-15 10:42:12,462 - functions - ERROR - There are no alerts
+2024-12-15 10:42:23,005 - functions - ERROR - There are no alerts
+2024-12-15 10:42:23,005 - functions - ERROR - Could not get alerts
+2024-12-15 10:42:43,029 - functions - ERROR - There are no alerts
+2024-12-15 10:42:48,088 - functions - ERROR - There are no alerts
+2024-12-15 10:44:20,876 - functions - ERROR - There are no alerts
+2024-12-15 13:40:32,617 - functions - INFO - 2 aqis were returned for the city Netanya
+2024-12-15 13:40:55,813 - functions - ERROR - There is no data about the aqi of the city 
+2024-12-15 14:06:14,027 - functions - ERROR - Received start day that is later than end date
+2024-12-15 14:26:43,659 - functions - ERROR - An invalid date format was received
+2024-12-15 15:04:59,969 - functions - INFO - 2 aqis were returned for the city Tel Mond
+2024-12-15 15:05:03,733 - functions - ERROR - There is no data about the aqi of the city Tel Mon
+2024-12-15 15:05:53,196 - functions - ERROR - There is no data about the aqi of the city Tel
+2024-12-15 15:07:44,216 - functions - ERROR - There is no data about the aqi of the city Tel
+2024-12-15 15:08:39,323 - functions - ERROR - There is no data about the aqi of the city Tel
+2024-12-15 16:19:20,623 - python_multipart.multipart - DEBUG - Calling on_part_begin with no data
+2024-12-15 16:19:20,624 - python_multipart.multipart - DEBUG - Calling on_header_field with data[54:73]
+2024-12-15 16:19:20,624 - python_multipart.multipart - DEBUG - Calling on_header_value with data[75:136]
+2024-12-15 16:19:20,624 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-15 16:19:20,624 - python_multipart.multipart - DEBUG - Calling on_header_field with data[138:150]
+2024-12-15 16:19:20,624 - python_multipart.multipart - DEBUG - Calling on_header_value with data[152:160]
+2024-12-15 16:19:20,624 - python_multipart.multipart - DEBUG - Calling on_header_end with no data
+2024-12-15 16:19:20,624 - python_multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2024-12-15 16:19:20,625 - python_multipart.multipart - DEBUG - Calling on_part_data with data[0:261]
+2024-12-15 16:19:20,625 - python_multipart.multipart - DEBUG - Calling on_part_end with no data
+2024-12-15 16:19:20,625 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2024-12-15 16:19:20,654 - functions - INFO - corrupted lines - Empty DataFrame
+Columns: [date, city, PM2.5, NO2, CO2]
+Index: []
+2024-12-15 16:19:20,664 - functions - INFO - New alert was added for city Tel Mond at date 2024-11-25
+2024-12-15 16:19:20,665 - functions - INFO - New alert was added for city Tzur Moshe at date 2024-11-25
+2024-12-15 16:19:20,667 - functions - INFO - New alert was added for city Netanya at date 2024-11-25
+2024-12-15 16:19:20,669 - functions - INFO - New alert was added for city Hod Hasharon at date 2024-11-25
+2024-12-15 16:19:20,670 - functions - INFO - New alert was added for city Ganei Tikva at date 2024-11-25
+2024-12-15 16:19:20,672 - functions - INFO - New alert was added for city Kefar Sava at date 2024-11-25
+2024-12-15 16:19:20,675 - functions - INFO - New alert was added for city Rishon LeTsiyon at date 2024-11-25
+2024-12-15 16:19:20,675 - functions - INFO - New data was inserted to the database

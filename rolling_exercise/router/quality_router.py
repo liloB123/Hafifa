@@ -23,19 +23,19 @@ async def upload_data_route(file: UploadFile = File(...), db: Session = Depends(
         response = await insert_data_from_csv(db=db, df=clean_data)
 
         return JSONResponse(content=response, status_code=201)   
-    except Exception as e:
+    except HTTPException as e:
         raise e
 
 @router.get("/date", status_code=200)
 def get_quality_by_date_route(start_date: str, end_date: str, db: Session = Depends(get_db)):
     try:
         return get_qaulity_by_date(db, start_date, end_date)
-    except Exception as e:
-        return e
+    except HTTPException as e:
+        raise e
     
 @router.get("/city", status_code=200)
 def get_quality_by_city_route(city: str, db: Session = Depends(get_db)):
     try:
         return get_quality_by_city(db, city)
-    except Exception as e:
-        return e
+    except HTTPException as e:
+        raise e
