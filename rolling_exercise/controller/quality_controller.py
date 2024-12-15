@@ -9,6 +9,7 @@ ALERT_AQI = 300
 
 async def insert_data_from_csv(db:Session, df:pd.DataFrame):
     try:
+        print("hello")
         for _, row in df.iterrows():
             aqi = calculate_aqi(row['PM2.5'], row['NO2'], row['CO2'])[0]
             date=row['date']
@@ -28,6 +29,8 @@ async def insert_data_from_csv(db:Session, df:pd.DataFrame):
 
         logger.info("New data was inserted to the database")
         return {"message": "Data added successfully!"}
+    except HTTPException as e:
+        raise e
     except Exception as e:
         logger.error(f"There has been a problem while trying to add data - {e}")
         raise HTTPException(status_code=400, detail=f"Could not upload the data - {e}")

@@ -3,11 +3,45 @@ from unittest.mock import MagicMock, patch
 from fastapi.exceptions import HTTPException
 from quality_controller import get_qaulity_by_date, get_quality_by_city, insert_data_from_csv
 from models import Data
+import pandas as pd
+
+ALERT_AQI = 100 
 
 @pytest.fixture
 def mock_db_session():
-    return MagicMock()
+    mock_db = MagicMock()
+    mock_db.add = MagicMock()
+    mock_db.commit = MagicMock()
+    return mock_db
 
+######## insert data #######
+@pytest.fixture
+def mock_dataframe():
+    data = {
+        "date": ["2024-11-19", "2024-11-20"],
+        "city": ["Tel Mond", "Hod Hasharon"],
+        "PM2.5": [60, 20],
+        "NO2": [30, 40],
+        "CO2": [300, 400]
+    }
+    return pd.DataFrame(data)
+
+@pytest.mark.asyncio
+async def test_insert_data_from_csv_successful(mock_db_session, mock_dataframe):
+    result = await insert_data_from_csv(mock_db_session, mock_dataframe)
+    
+    assert result["message"] == "Data added successfully!"
+
+@pytest.mark.asyncio
+async def test_insert_data_from_csv_db_error(mock_db_session, mock_dataframe):
+    mock_db_session.commit.side_effect = Exception("Database error")
+    
+    with pytest.raises(HTTPException) as exc_info:
+        await insert_data_from_csv(mock_db_session, mock_dataframe)
+    
+    assert exc_info.value.status_code == 500
+
+######## city #######
 def test_get_quality_by_city_success_several_instances(mock_db_session):
     mock_data = [Data(date='2024-11-19', city="Tel Mond", pm25=60, co2= 410, aqi=300),
         Data(date='2024-11-19', city="Hod Hasharon", pm25=20, co2= 300, aqi=500),
@@ -71,7 +105,7 @@ def test_get_quality_by_city_missing_city(mock_db_session):
     
     assert exc_info.value.status_code == 422
 
-# ####### date #######
+######## date #######
 def test_get_quality_by_date_success_several_instances(mock_db_session):
     mock_data = [Data(date='2024-11-10', city="Tel Mond", pm25=60, co2= 410, aqi=300),
         Data(date='2024-11-11', city="Hod Hasharon", pm25=20, co2= 300, aqi=500),
