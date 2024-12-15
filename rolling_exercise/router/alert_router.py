@@ -6,22 +6,22 @@ from database import get_db
 router = APIRouter()
 
 @router.get("/", status_code=200)
-def get_alerts_route(db: Session = Depends(get_db)):
+async def get_alerts_route(db: Session = Depends(get_db)):
     try:
-        return get_alerts(db)
+        return await get_alerts(db)
     except HTTPException as e:
         raise e
 
 @router.get("/date", status_code=200)
-def get_alerts_by_date_route(start_date: str, end_date: str, db: Session = Depends(get_db)):
+async def get_alerts_by_date_route(start_date: str, end_date: str, db: Session = Depends(get_db)):
     try:
-        return get_alerts_by_date(db, start_date, end_date)
+        return await get_alerts_by_date(db, start_date, end_date)
     except HTTPException as e:
         raise e
 
 @router.get("/city", status_code=200)
-def get_alerts_by_city_route(city: str, db: Session = Depends(get_db)):
+async def get_alerts_by_city_route(city: str, db: Session = Depends(get_db)):
     try:
-        return get_alerts_by_city(db, city)
+        return await get_alerts_by_city(db, city)
     except HTTPException as e:
         raise e

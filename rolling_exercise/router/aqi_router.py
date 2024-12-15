@@ -10,22 +10,22 @@ from fastapi.responses import JSONResponse
 router = APIRouter()
 
 @router.get("/city", status_code=200)
-def get_aqi_by_city_router(city: str,  db: Session = Depends(get_db)):
+async def get_aqi_by_city_router(city: str,  db: Session = Depends(get_db)):
     try:
-        return get_aqi_by_city(db, city)
+        return await get_aqi_by_city(db, city)
     except HTTPException as e:
         raise e
     
 @router.get("/city/average", status_code=200)
-def get_average_aqi_by_city(city: str, db: Session = Depends(get_db)):
+async def get_average_aqi_by_city(city: str, db: Session = Depends(get_db)):
     try:
-        return f"The avergae aqi in {city} is {get_aqi_average(db, city)}"
+        return await f"The avergae aqi in {city} is {get_aqi_average(db, city)}"
     except HTTPException as e:
         raise e
 
 @router.get("/best", status_code=200)
-def get_best_cities_router(db: Session = Depends(get_db)):
+async def get_best_cities_router(db: Session = Depends(get_db)):
     try:
-        return f"The cities that have the best air conditions are {get_best_cities(db)}"
+        return await f"The cities that have the best air conditions are {get_best_cities(db)}"
     except HTTPException as e:
         raise e

@@ -23,7 +23,7 @@ async def insert_data_from_csv(db:Session, df:pd.DataFrame):
                 aqi=aqi
             )
             db.add(data)
-            check_if_alert(db, date, city, aqi)
+            await check_if_alert(db, date, city, aqi)
 
         db.commit()
 
@@ -35,7 +35,7 @@ async def insert_data_from_csv(db:Session, df:pd.DataFrame):
         logger.error(f"There has been a problem while trying to add data - {e}")
         raise HTTPException(status_code=400, detail=f"Could not upload the data - {e}")
     
-def check_if_alert(db:Session, date, city, aqi):
+async def check_if_alert(db:Session, date, city, aqi):
     try:
         if aqi > ALERT_AQI:
             alert = models.Alert(
@@ -52,7 +52,7 @@ def check_if_alert(db:Session, date, city, aqi):
         logger.error(f"Could not add alert - {e}")
         raise HTTPException(status_code=500, detail="Colud not add alert")
     
-def get_qaulity_by_date(db:Session, start:str, end:str):
+async def get_qaulity_by_date(db:Session, start:str, end:str):
     try:
         missing_params = validate_query_params({
             "start_date" : start,
@@ -78,7 +78,7 @@ def get_qaulity_by_date(db:Session, start:str, end:str):
         logger.error(f"Could not get air quality for the date range {start}-{end}")
         raise HTTPException(status_code=500, detail=f"There has been a problem while getting info about the date - {e}")
     
-def get_quality_by_city(db: Session, city:str):
+async def get_quality_by_city(db: Session, city:str):
     try:
         missing_params = validate_query_params({
             "city" : city,

@@ -3,7 +3,7 @@ import models
 from functions import logger, validate_date, validate_query_params
 from fastapi import HTTPException
 
-def get_alerts(db: Session):
+async def get_alerts(db: Session):
     try:
         alerts = db.query(models.Alert).all()
 
@@ -19,7 +19,7 @@ def get_alerts(db: Session):
         logger.error(f"Could not get alerts")
         raise HTTPException(status_code=500, detail=f"There has been a problem while getting alerts - {e}")
     
-def get_alerts_by_date(db:Session, start:str, end:str):
+async def get_alerts_by_date(db:Session, start:str, end:str):
     try:
         missing_params = validate_query_params({
             "start_date" : start,
@@ -33,7 +33,7 @@ def get_alerts_by_date(db:Session, start:str, end:str):
 
         alerts = db.query(models.Alert).filter(models.Alert.date >= start, models.Alert.date <= end).all()
 
-        if  alerts:
+        if alerts:
             logger.info(f"{len(alerts)} rows were returned for the date range {start}-{end}")
             return alerts
         else:
@@ -45,7 +45,7 @@ def get_alerts_by_date(db:Session, start:str, end:str):
         logger.error(f"Could not get alerts in the date range {start}-{end}")
         raise HTTPException(status_code=500, detail=f"There has been a problem while getting info about the alerts - {e}")
 
-def get_alerts_by_city(db: Session, city:str):
+async def get_alerts_by_city(db: Session, city:str):
     try:
         missing_params = validate_query_params({
             "city" : city,
@@ -59,8 +59,6 @@ def get_alerts_by_city(db: Session, city:str):
         if alerts:
             logger.info(f"{len(alerts)} alerts were returned of the city {city}")
             return alerts  
-        
-        print("no")
         
         logger.error(f"There are no alerts of the city {city}")
         raise HTTPException(status_code=404, detail="There are no alerts of this city")

@@ -27,15 +27,15 @@ async def upload_data_route(file: UploadFile = File(...), db: Session = Depends(
         raise e
 
 @router.get("/date", status_code=200)
-def get_quality_by_date_route(start_date: str, end_date: str, db: Session = Depends(get_db)):
+async def get_quality_by_date_route(start_date: str, end_date: str, db: Session = Depends(get_db)):
     try:
-        return get_qaulity_by_date(db, start_date, end_date)
+        return await get_qaulity_by_date(db, start_date, end_date)
     except HTTPException as e:
         raise e
     
 @router.get("/city", status_code=200)
-def get_quality_by_city_route(city: str, db: Session = Depends(get_db)):
+async def get_quality_by_city_route(city: str, db: Session = Depends(get_db)):
     try:
-        return get_quality_by_city(db, city)
+        return await get_quality_by_city(db, city)
     except HTTPException as e:
         raise e
